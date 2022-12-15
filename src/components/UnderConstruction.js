@@ -4,7 +4,7 @@ import '../index.css';
 export default function UnderConstruction() {
     return (
         <div className="underConstWrapper">
-            <p className="underConstMsg">UNDER CONSTRUCTION</p>
+            <p className="underConstMsg underline">UNDER CONSTRUCTION</p>
         </div>
     );
 }
