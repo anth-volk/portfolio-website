@@ -1,0 +1,22 @@
+/* Font settings for under construction message */
+
+.underConstWrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.underConstMsg {
+    margin: 0 24px;
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+}
+
+@media screen and (max-width: 576px) {
+    .underConstMsg {
+        font-size: 3rem;
+    }
+}
