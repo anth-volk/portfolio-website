@@ -1,0 +1,14 @@
+/* Font settings for under construction message */
+
+.underConstWrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.underConstMsg {
+    font-size: 6rem;
+    color: white;
+}

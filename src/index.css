@@ -1,4 +1,8 @@
-/* style reset inspired by https://piccalil.li/blog/a-modern-css-reset/ */
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+/* Style reset inspired by https://piccalil.li/blog/a-modern-css-reset/ */
 
 /* Add global border-box */
 *, *::before, *::after {
@@ -39,6 +43,32 @@ picture {
   max-width: 100%;
   display: block;
 }
+
+/* Site-wide styling root vars */
+
+:root {
+  --site-background-color: #36383a;
+  --primary-text-color: white;
+  --secondary-text-color: #aaa;
+  --accent-color: #00ac0f;
+  --sans-serif-font: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  --mono-font: 'Fira Code', 'Courier New', monospace;
+}
+
+/* Standard page styling */
+
+html, body {
+  background-color: var(--site-background-color);
+}
+
+/* ADD HEADER STYLING */
+
+p {
+  font-family: var(--sans-serif-font);
+}
+
+/* Device-specific root element sizing */
+
 
 /* Accessibility changes */
 
