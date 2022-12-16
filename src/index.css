@@ -1,15 +1,19 @@
-/* Imports */
+/* IMPORTS */
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
-/* Style reset inspired by https://piccalil.li/blog/a-modern-css-reset/ */
+/* ROOT VARS */
 
-/* Add global border-box */
-*, 
-*::before, 
-*::after {
-  box-sizing: border-box;
+:root {
+  --site-background-color: #36383a;
+  --primary-text-color: white;
+  --secondary-text-color: #aaa;
+  --accent-color: #00ac0f;
+  --sans-serif-font: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  --mono-font: 'Fira Code', 'Courier New', monospace;
 }
+
+/* STYLE RESET (inspired by https://piccalil.li/blog/a-modern-css-reset/) */
 
 /* Remove default margin */
 body,
@@ -24,6 +28,16 @@ dl,
 dd {
   margin: 0;
 }
+
+/* SITE-WIDE STYLING: ELEMENT BEHAVIOR */
+
+/* Add global border-box */
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
 
 /* Set site-wide smooth scrolling */
 html:focus-within {
@@ -46,16 +60,7 @@ picture {
   display: block;
 }
 
-/* Site-wide styling root vars */
-
-:root {
-  --site-background-color: #36383a;
-  --primary-text-color: white;
-  --secondary-text-color: #aaa;
-  --accent-color: #00ac0f;
-  --sans-serif-font: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
-  --mono-font: 'Fira Code', 'Courier New', monospace;
-}
+/* SITE-WIDE STYLING: AESTHETICS */
 
 /* Standard page styling */
 
@@ -70,7 +75,7 @@ p {
   font-size: 1rem;
 }
 
-/* Text effects */
+/* SITE-WIDE STYLING: TEXT EFFECTS */
 
 .underline {
   position: relative;
@@ -95,10 +100,7 @@ p {
   right: 0;
 }
 
-/* Device-specific root element sizing */
-
-
-/* Accessibility changes */
+/* ACCESSIBILITY */
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {

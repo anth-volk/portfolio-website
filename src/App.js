@@ -1,10 +1,10 @@
 import './App.css';
-import UnderConstruction from './components/UnderConstruction';
+import Home from './components/Home.js';
 
-function App() {
+export default function App() {
   return (
     <main>
-      <UnderConstruction />
+      <Home />
     </main>
 
   );
