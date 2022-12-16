@@ -1,0 +1,105 @@
+p {
+    font-weight: 500;
+}
+
+.Home {
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.Home_wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.Home_wrapperLeft {
+    width: 50%;
+    padding-left: 12.5vw;
+    padding-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+}
+
+.Home_wrapperRight {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Home_navAnchor {
+    display: block;
+}
+
+/* Overwrite default underlining for a tag */
+
+.Home_navAnchor::after {
+    content: none;
+}
+
+.Home_navText {
+    font-size: 8.5vw;
+    font-weight: 300;
+    letter-spacing: -8px;
+    color: var(--secondary-text-color);
+    transition: color 0.4s ease-in-out;
+    cursor: pointer;
+    line-height: 1.1;
+}
+
+.Home_navText::before {
+    content: ".";
+    margin-right: -1vw;
+}
+
+.Home_navText::after {
+    content: "()";
+}
+
+.Home_navText::before,
+.Home_navText::after {
+    color: var(--accent-color);
+    opacity: 0;
+    display: inline;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.Home_navText:hover {
+    color: var(--primary-text-color);
+}
+
+.Home_navText:hover::before,
+.Home_navText:hover::after {
+    opacity: 100%;
+}
+
+.Home_text-bracket {
+    color: var(--accent-color);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.Home_text-bracket.active {
+    opacity: 100%;
+}
+
+.Home_text-greenHover {
+    transition: color 0.4s ease-in-out;
+}
+
+.Home_text-greenHover:hover {
+    color: var(--accent-color);
+}

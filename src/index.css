@@ -1,6 +1,6 @@
 /* IMPORTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
 /* ROOT VARS */
 
@@ -27,6 +27,17 @@ blockquote,
 dl,
 dd {
   margin: 0;
+}
+
+/* Alter default anchor styling */
+a,
+a:hover,
+a:focus,
+a:active
+a:visited {
+  color: var(--accent-color);
+  text-decoration: unset;
+  cursor: pointer;
 }
 
 /* SITE-WIDE STYLING: ELEMENT BEHAVIOR */
@@ -62,41 +73,65 @@ picture {
 
 /* SITE-WIDE STYLING: AESTHETICS */
 
-/* Standard page styling */
+/* Default page styling */
 
 html {
   background-color: var(--site-background-color);
 }
 
-/* ADD HEADER STYLING */
+h1, h2, h3 {
+  font-family: var(--mono-font);
+  color: var(--primary-text-color);
+  cursor: default;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
 
 p {
   font-family: var(--sans-serif-font);
+  color: var(--secondary-text-color);
   font-size: 1rem;
+  cursor: default;
 }
 
 /* SITE-WIDE STYLING: TEXT EFFECTS */
 
-.underline {
-  position: relative;
-  overflow: hidden;
+.Global_text-pageHeader {
+  text-decoration: underline var(--accent-color) 0.375rem;
 }
 
-.underline:after {
+.Global_text-primaryColor {
+  color: var(--primary-text-color);
+}
+
+a,
+.Global_text-underline {
+  position: relative;
+  overflow: hidden;
+  display: inline;
+}
+
+a:after,
+.Global_text-underline:after {
   content: "";
   position: absolute;
   z-index: -1;
   left: 0;
   right: 100%;
-  bottom: 0.0625em;
+  bottom: -0.125em;
   background: var(--accent-color);
   height: 0.375em;
   transition: right 0.4s ease-in-out;
 }
 
-.underline:hover:after,
-.underline:focus:after,
-.underline:active:after {
+a:hover:after,
+a:focus:after,
+a:active:after,
+.Global_text-underline:hover:after,
+.Global_text-underline:focus:after,
+.Global_text-underline:active:after {
   right: 0;
 }
 
