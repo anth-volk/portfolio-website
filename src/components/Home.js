@@ -1,5 +1,7 @@
+// External imports
 import {useState} from 'react';
 
+// Internal imports
 import './Home.css';
 
 export default function Home() {
@@ -18,7 +20,7 @@ export default function Home() {
         <section className="Home" id="home">
             <div className="Home_wrapper">
                 <div className="Home_wrapperLeft">
-                    <h1 className="Global_text-pageHeader">ANTHONY VOLK</h1>
+                    <h1 className="Global_text-pageHeader Home_text-pageHeader">ANTHONY VOLK</h1>
                     <p className={`Home_text-bracket ${isHovering? "active": ""}`}>{"{"}</p>
                     <div className="Home_text-hero" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                         <p><span className="Home_text-greenHover">aspiration: </span><span className="Global_text-primaryColor">full-stack developer</span></p>

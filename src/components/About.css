@@ -1,0 +1,19 @@
+
+.About {
+    min-height: 100vh;
+    padding-top: var(--nav-height);
+    display: grid;
+    grid-template-columns: var(--gutter) calc(49vw - var(--gutter)) calc(49vw - var(--gutter)) var(--gutter);
+}
+
+.About_left {
+    padding-right: 0.5vw;
+}
+
+.About_right {
+    padding-left: 0.5vw;
+}
+
+.About_text {
+    padding-bottom: 1rem;
+}

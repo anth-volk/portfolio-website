@@ -11,7 +11,9 @@
   --accent-color: #00ac0f;
   --sans-serif-font: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
   --mono-font: 'Fira Code', 'Courier New', monospace;
-  --gutter: 12.5vw;
+  --gutter: 6.25vw;
+  --header-font-size: 2.5rem;
+  --text-font-size: 1.125rem;
 }
 
 /* STYLE RESET (inspired by https://piccalil.li/blog/a-modern-css-reset/) */
@@ -30,16 +32,6 @@ dd {
   margin: 0;
 }
 
-/* Alter default anchor styling */
-a,
-a:hover,
-a:focus,
-a:active
-a:visited {
-  color: var(--accent-color);
-  text-decoration: unset;
-  cursor: pointer;
-}
 
 /* SITE-WIDE STYLING: ELEMENT BEHAVIOR */
 
@@ -80,20 +72,29 @@ html {
   background-color: var(--site-background-color);
 }
 
-h1, h2, h3 {
-  font-family: var(--mono-font);
-  color: var(--primary-text-color);
-  cursor: default;
+/* Alter default anchor styling */
+a,
+a:hover,
+a:focus,
+a:active
+a:visited {
+  color: var(--accent-color);
+  text-decoration: unset;
+  cursor: pointer;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-family: var(--mono-font);
+  color: var(--primary-text-color);
+  cursor: default;
+  padding: 2rem 0;
+  font-size: var(--header-font-size);
 }
 
-p {
+p, li {
   font-family: var(--sans-serif-font);
   color: var(--secondary-text-color);
-  font-size: 1rem;
+  font-size: var(--text-font-size);
 }
 
 /* SITE-WIDE STYLING: TEXT EFFECTS */

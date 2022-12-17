@@ -48,6 +48,7 @@
 }
 
 .Home_navText {
+    padding: 0;
     font-size: 8.5vw;
     font-weight: 300;
     letter-spacing: -8px;
@@ -104,4 +105,10 @@
 .Home_text-hero {
     font-weight: 500;
     cursor: default;
+}
+
+/* Override default page header padding only for Home.js */
+
+.Home_text-pageHeader {
+    padding: 0;
 }

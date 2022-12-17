@@ -5,14 +5,19 @@ import './Navbar.css';
 
 export default function Navbar() {
     return (
-        <navbar className="Navbar" id="navbar">
+        <nav className="Navbar" id="navbar">
             <a href="#home"><p className="Navbar_logo">ANTHONY VOLK</p></a>
             <div className="Navbar_right">
-                <a href="#about"><p className="Navbar_link">about</p></a>
-                <a href="#projects"><p className="Navbar_link">projects</p></a>
-                <a href="#writing"><p className="Navbar_link">writing</p></a>
-                <a href="#contact"><p className="Navbar_link">contact</p></a>
+                <ul className="Navbar_navList">
+                    <a href="#about"><li className="Navbar_link">about</li></a>
+                    <a href="#projects"><li className="Navbar_link">projects</li></a>
+                    <a href="#writing"><li className="Navbar_link">writing</li></a>
+                    <a href="#contact"><li className="Navbar_link">contact</li></a>
+                </ul>
+
+
+
             </div>
-        </navbar>
+        </nav>
     );
 }
