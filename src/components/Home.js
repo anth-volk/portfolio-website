@@ -15,12 +15,12 @@ export default function Home() {
     };
 
     return (
-        <div className="Home">
+        <section className="Home" id="home">
             <div className="Home_wrapper">
                 <div className="Home_wrapperLeft">
                     <h1 className="Global_text-pageHeader">ANTHONY VOLK</h1>
                     <p className={`Home_text-bracket ${isHovering? "active": ""}`}>{"{"}</p>
-                    <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+                    <div className="Home_text-hero" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                         <p><span className="Home_text-greenHover">aspiration: </span><span className="Global_text-primaryColor">full-stack developer</span></p>
                         <p><span className="Home_text-greenHover">motivation: </span><span className="Global_text-primaryColor">just & ethical tech</span></p>
                         <p><span className="Home_text-greenHover">status: </span><span className="Global_text-primaryColor">seeking freelance & full-time</span></p>
@@ -35,6 +35,6 @@ export default function Home() {
                     <a className="Home_navAnchor" href="#contact"><h1 className="Home_navText">contact</h1></a>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
