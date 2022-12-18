@@ -6,21 +6,32 @@
     grid-template-columns: var(--gutter) calc(49vw - var(--gutter)) calc(49vw - var(--gutter)) var(--gutter);
 }
 
-.About_imageContainer {
-    padding-top: 2rem;
-}
-
 .About_image {
-    margin: 0 auto;
+    margin: calc(2rem + 8px) auto 0 auto;
     height: 30vh;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: 0 0;
+    border: 3px solid var(--accent-color);
+    border-radius: 8px;
 }
 
 .About_left {
-    padding-right: 0.5vw;
+    padding-right: 1vw;
 }
 
 .About_right {
-    padding-left: 0.5vw;
+    padding-left: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.About_skills {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .About_text {

@@ -15,8 +15,37 @@ export default function About () {
                 <a className="button" href={Pdf} target="_blank" rel="noreferrer">Résumé</a>
             </div>
             <div className="About_right">
-                <div className="About_imageContainer">
-                    <img className="About_image" src={Img} alt="Anthony Volk against dark background"/>
+                <img className="About_image" src={Img} alt="Anthony Volk against dark background"/>
+                <div className="About_skills">
+                    <div className="About_skillsLeft">
+                        <h2>Skills</h2>
+                        <p>Analytical problem-solving</p>
+                        <p>Wireframing</p>
+                        <p>Sitemapping</p>
+                        <p>Strategy</p>
+                        <h2>Software Applications</h2>
+                        <p>Figma</p>
+                        <p>Git version control</p>
+                        <p>Inkscape</p>
+                        <p>Google productivity suite</p>
+                        <p>Microsoft Office suite</p>
+                        <p>Microsoft Teams</p>
+                    </div>
+                    <div className="About_skillsRight">
+                        <h2>Software Languages & Platforms</h2>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JavaScript</p>
+                        <p>React</p>
+                        <p>SQL</p>
+                        <p>Python</p>
+                        <p>Flask</p>
+                        <p>C</p>
+                        <h2>Natural Languages</h2>
+                        <p>English (native)</p>
+                        <p>Japanese (advanced)</p>
+                        <p>Hungarian (elementary)</p>
+                    </div>
                 </div>
             </div>
             <div className="About_gutter" />
