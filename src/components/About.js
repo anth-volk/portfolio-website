@@ -6,7 +6,6 @@ import Img from '../assets/volk-anthony-img.png';
 export default function About () {
     return (
         <section className="About" id="about">
-            <div className="About_gutter" />
             <div className="About_left">
                 <h1>ABOUT ME</h1>
                 <p className="App_text-paragraphBlock">Hi! My name’s Anthony, and I am an aspiring <span className="App_text-callout">full-stack developer</span> and <span className="App_text-callout">software engineer</span>. I wrote my first HTML on a Windows 98 computer when I was 7 years old. Since then, I’ve been fascinated with computing and web development, exploring everything from retro operating systems to command-line programming and website design.</p>
@@ -48,7 +47,6 @@ export default function About () {
                     </div>
                 </div>
             </div>
-            <div className="About_gutter" />
         </section>
     );
 }

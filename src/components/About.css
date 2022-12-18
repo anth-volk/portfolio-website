@@ -1,9 +1,10 @@
 
 .About {
     min-height: 100vh;
+    padding: var(--nav-height) var(--gutter) 0 var(--gutter);
     padding-top: var(--nav-height);
     display: grid;
-    grid-template-columns: var(--gutter) calc(49vw - var(--gutter)) calc(49vw - var(--gutter)) var(--gutter);
+    grid-template-columns: calc(49vw - var(--gutter)) calc(49vw - var(--gutter));
 }
 
 .About_image {
