@@ -6,6 +6,15 @@
     grid-template-columns: var(--gutter) calc(49vw - var(--gutter)) calc(49vw - var(--gutter)) var(--gutter);
 }
 
+.About_imageContainer {
+    padding-top: 2rem;
+}
+
+.About_image {
+    margin: 0 auto;
+    height: 30vh;
+}
+
 .About_left {
     padding-right: 0.5vw;
 }

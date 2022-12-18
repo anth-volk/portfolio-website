@@ -37,16 +37,6 @@
     justify-content: center;
 }
 
-.Home_navAnchor {
-    display: block;
-}
-
-/* Overwrite default underlining for a tag */
-
-.Home_navAnchor::after {
-    content: none;
-}
-
 .Home_navText {
     padding: 0;
     font-size: 8.5vw;
@@ -54,8 +44,8 @@
     letter-spacing: -8px;
     color: var(--secondary-text-color);
     transition: color 0.4s ease-in-out;
-    cursor: pointer;
     line-height: 1.1;
+    text-decoration: none;
 }
 
 .Home_navText::before {
@@ -105,10 +95,4 @@
 .Home_text-hero {
     font-weight: 500;
     cursor: default;
-}
-
-/* Override default page header padding only for Home.js */
-
-.Home_text-pageHeader {
-    padding: 0;
 }
