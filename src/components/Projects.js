@@ -6,7 +6,7 @@ export default function Projects() {
 
     let projectsJSX = projectData.map( (item, index) => {
 
-        {/* Further work necessary 
+        /* Further work necessary 
 
         let techTagsJSX = projectData.map( (item, index) => {
             return (
@@ -14,7 +14,7 @@ export default function Projects() {
             )
         })
 
-        */}
+        */
 
         return (
             <a className="Projects_containerItem" href={item.link}>
