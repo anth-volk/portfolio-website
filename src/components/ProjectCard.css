@@ -55,6 +55,7 @@
     padding-top: 0;
     padding-bottom: 0.5vw;
     text-decoration: underline 0.25vw solid var(--accent-color);
+    text-decoration-skip-ink: none;
 }
 
 .Projects_itemDesc {

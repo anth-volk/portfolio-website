@@ -81,6 +81,7 @@ h1 {
   padding: 2rem 0;
   font-size: var(--header-font-size);
   text-decoration: underline var(--accent-color) 0.375rem;
+  text-decoration-skip-ink: none;
 }
 
 h2 {

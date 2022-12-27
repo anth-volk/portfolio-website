@@ -1,0 +1,35 @@
+.Medium_card {
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+
+.Medium_cardTitle {
+    font-size: var(--nav-text-size);
+    padding: 0.5em 0 0 0;
+    text-decoration: underline calc(0.125 * var(--nav-text-size)) solid var(--accent-color);
+}
+
+.Medium_cardDate {
+    font-size: calc(0.75 * var(--text-font-size));
+    font-style: italic;
+}
+
+.medium-feed-item {
+    padding-top: 0.5em;
+}
+
+.medium-feed-image {
+    float: left;
+    padding: 0 0.5em 0.5em 0.5em;
+    text-decoration: none;
+}
+
+/* Override default a styling */
+.medium-feed-image a::after {
+    content: none;
+}
+
+.medium-feed-image img {
+    max-height: 180px;
+    width: auto;
+}

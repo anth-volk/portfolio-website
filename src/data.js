@@ -10,5 +10,16 @@ export const projectData = [
         image: "/assets/portfolio.png",
         link: "http://www.anthonyvolk.com"
     },
+    {
+        name: "Random Quote Generator",
+        description: "React applet that displays quote fetched from GitHub and allows user to Tweet it (FreeCodeCamp project)",
+        techTags: [
+            "React",
+            "HTML",
+            "CSS"
+        ],
+        image: "/assets/random_quote_generator.png",
+        link: "https://codepen.io/anth-volk/pen/vYaYzJe"
+    }
 
 ];

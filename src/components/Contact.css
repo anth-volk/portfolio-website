@@ -1,0 +1,4 @@
+.Contact {
+    min-height: 100vh;
+    padding: var(--nav-height) var(--gutter) 0 var(--gutter);
+}
