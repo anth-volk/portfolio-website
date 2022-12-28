@@ -1,4 +1,51 @@
 .Contact {
     min-height: 100vh;
     padding: var(--nav-height) var(--gutter) 0 var(--gutter);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.Contact p {
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.Contact_container {
+    min-height: 0;
+    flex: 1;
+    display: flex;
+    padding-bottom: 3em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.Contact_emphasisText {
+    font-weight: bold;
+    color: var(--primary-text-color);
+}
+
+.Contact_socialWrapper {
+    font-size: 1.75em;
+    color: var(--accent-color);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Contact_socialWrapper a {
+    display: inline;
+    color: unset;
+    position: relative;
+    padding: 0 8px;
+    font-size: 0.9em;
+    font-family: var(--sans-serif-font);
+}
+
+.Contact_socialWrapper i {
+    position: relative;
 }

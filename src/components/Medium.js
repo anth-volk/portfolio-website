@@ -53,7 +53,7 @@ export default function Medium() {
     }
     else if (error) {
         return (
-            <p>Module error; check console logs for more details</p>
+            <p>{`Module error: {error}`}</p>
         );
     }
     else {

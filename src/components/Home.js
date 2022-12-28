@@ -28,7 +28,11 @@ export default function Home() {
                         <p><span className="Home_text-greenHover">status: </span><span className="App_text-primaryColor">seeking freelance & full-time</span></p>
                     </div>
                     <p className={`Home_text-bracket ${isHovering? "active": ""}`}>{"}"}</p>
-                    <p className="App_text-primaryColor"><a href="https://www.linkedin.com/in/anthonyvolk/" target="_blank" rel="noreferrer">LinkedIn</a>, <a href="https://github.com/anth-volk" target="_blank" rel="noreferrer">GitHub</a>, <a href="https://codepen.io/anth-volk" target="_blank" rel="noreferrer">CodePen</a></p>
+
+                    {/* All on one line to ensure spaces after commas */}
+                    <p className="App_text-primaryColor"><a href="https://www.linkedin.com/in/anthonyvolk/" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin"></i>LinkedIn</a>  <a href="https://github.com/anth-volk" target="_blank" rel="noreferrer"><i className="fa-brands fa-square-github"></i>GitHub</a>  <a href="mailto:anth.volk@gmail.com" target="_blank" rel="noreferrer"><i className="fa-solid fa-envelope"></i>Email</a></p>
+                    <p className="App_text-primaryColor"><a href="https://codepen.io/anth-volk" target="_blank" rel="noreferrer"><i className="fa-brands fa-codepen"></i>CodePen</a>  <a href="https://codesandbox.io/u/anth-volk" target="_blank" rel="noreferrer"><i className="fa-regular fa-square"></i>CodeSandbox</a>  <a href="https://www.codewars.com/users/anth-volk" target="_blank" rel="noreferrer"><i className="fa-solid fa-fan"></i>CodeWars</a> </p>
+
                 </div>
                 <div className="Home_wrapperRight">
                     <a href="#about"><h1 className="App_cursor-pointer Home_navText">about</h1></a>

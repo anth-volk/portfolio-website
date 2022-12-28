@@ -99,6 +99,10 @@ p, li {
   font-size: var(--text-font-size);
 }
 
+i {
+  padding-right: 0.125em;
+}
+
 a,
 a:hover,
 a:focus,
@@ -117,7 +121,8 @@ p > a:visited {
   position: relative;
 }
 
-p > a:after {
+p > a::after,
+.App_underline::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -129,9 +134,12 @@ p > a:after {
   transition: right 0.4s ease-in-out;
 }
 
-p > a:hover:after,
-p > a:focus:after,
-p > a:active:after {
+p > a:hover::after,
+p > a:focus::after,
+p > a:active::after,
+.App_underline:hover::after,
+.App_underline:focus::after,
+.App_underline:active::after {
   right: 0;
 }
 
