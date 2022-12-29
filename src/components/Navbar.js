@@ -3,9 +3,10 @@
 // Internal imports
 import './Navbar.css';
 
-export default function Navbar() {
+export default function Navbar(props) {
+
     return (
-        <nav className="Navbar" id="navbar">
+        <nav className={props.visible ? "Navbar visible" : "Navbar hidden"} id="navbar">
             <a href="#home"><p className="Navbar_logo">ANTHONY VOLK</p></a>
             <div className="Navbar_navList">
                 <ul>

@@ -12,10 +12,10 @@ export default function ProjectCard({obj, index}) {
 
     // Return card JSX
     return (
-        <a className="Projects_containerItem" href={obj.link}>
+        <a className="Projects_containerItem" href={obj.link} target="_blank" rel="noreferrer">
             <div className="Projects_containerInner">
                 <div className="Projects_containerItem-inactive">
-                    <img src={obj.image} alt={obj.name}></img>
+                    <img className="Projects_image" src={obj.image} alt={obj.name}></img>
                 </div>
                 <div className="Projects_containerItem-active" >
                     <p className="Projects_itemTitle" >{obj.name}</p>
