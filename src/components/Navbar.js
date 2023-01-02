@@ -12,7 +12,7 @@ export default function Navbar(props) {
     if (props.smallDevice) {
 
         const handleDropdownSelected = () => {
-            setIsDropdownSelected(!isDropdownSelected);
+            setIsDropdownSelected(prevState => !prevState);
         };
 
         return (
