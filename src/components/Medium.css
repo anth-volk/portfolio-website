@@ -7,7 +7,9 @@
 .Medium_cardTitle {
     font-size: var(--nav-text-size);
     padding: 1em 0 0 0;
-    text-decoration: underline calc(0.125 * var(--nav-text-size)) solid var(--accent-color);
+    text-decoration-line: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: calc(0.125 * var(--nav-text-size));
 }
 
 .Medium_cardDate {

@@ -61,7 +61,9 @@
     color: var(--primary-text-color);
     padding-top: 0;
     padding-bottom: 0.5vw;
-    text-decoration: underline 0.25vw solid var(--accent-color);
+    text-decoration-line: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 0.25vw;
     text-decoration-skip-ink: none;
 }
 
@@ -127,6 +129,7 @@
 
     .Projects_itemTitle {
         font-size: 6vw;
+        text-decoration-thickness: 0.75vw;
     }
 
     .Projects_itemDesc {

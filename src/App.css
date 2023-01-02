@@ -80,7 +80,9 @@ h1 {
   cursor: default;
   padding: 2rem 0;
   font-size: var(--header-font-size);
-  text-decoration: underline var(--accent-color) 0.375rem;
+  text-decoration-line: underline;
+  text-decoration-color: var(--accent-color);
+  text-decoration-thickness: 0.375rem;
   text-decoration-skip-ink: none;
 }
 
@@ -218,8 +220,19 @@ a.button {
 }
 
 @media screen and (max-width: 575px) {
-  p > a {
-    text-decoration: underline solid 0.125em;
-    text-decoration-skip-ink: none;
+
+  p > a::after,
+  .App_underline::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: -0.05em;
+    background: var(--accent-color);
+    height: 0.125em;
+    transition: none;
   }
+
+
 }
