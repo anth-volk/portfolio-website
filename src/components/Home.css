@@ -96,3 +96,22 @@
     font-weight: 500;
     cursor: default;
 }
+
+.Home_text-socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.5em;
+}
+
+@media screen and (max-width: 575px) {
+    
+    .Home_wrapperLeft {
+        width: 100%;
+    }
+
+    .Home_wrapperRight {
+        display: none;
+    }
+}

@@ -13,33 +13,53 @@ import Contact from './components/Contact.js';
 function App() {
 
   const [isVisible, setIsVisible] = useState(false);
+  const [isSmallDevice, setIsSmallDevice] = useState(false);
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
-  // Make navbar visible only if user has scrolled past homepage
+  /* Make navbar visible only if user has scrolled past homepage,
+  or display alternative navbar if using small screen */
   useEffect(() => {
+    
 
-    /* Find the top of About relative to viewport,
-    then add height of page to find absolute height of About */
-    let aboutAbsPos = document.getElementById("about").getBoundingClientRect().top + window.scrollY;
+    /* First, determine if screen is small; if so, set isVisible to universally true
+    and then pass conditional variable to display small-size navbar */
 
-    // Add scroll event listener
-    document.addEventListener("scroll", (e) => {
+    window.addEventListener("resize", (e) => {
+      setViewportWidth(window.innerWidth);
+    })
 
-      /* If window.scrollY is greater than aboutAbsPos, 
-      set isVisible to true, else set false */
-      if (window.scrollY >= aboutAbsPos) {
-        setIsVisible(true);
-      }
-      else {
-        setIsVisible(false);
-      }
+    if (viewportWidth <= 575) {
+      setIsSmallDevice(true);
+      setIsVisible(true);
+    }
 
-    });
+    else {
 
-  })
+      setIsSmallDevice(false);
+
+      /* Find the top of About relative to viewport,
+      then add height of page to find absolute height of About */
+      let aboutAbsPos = document.getElementById("about").getBoundingClientRect().top + window.scrollY;
+
+      // Add scroll event listener
+      document.addEventListener("scroll", (e) => {
+
+        /* If window.scrollY is greater than aboutAbsPos, 
+        set isVisible to true, else set false */
+        if (window.scrollY >= aboutAbsPos) {
+          setIsVisible(true);
+        }
+        else {
+          setIsVisible(false);
+        }
+      })
+    }
+
+    }, [isVisible, isSmallDevice, viewportWidth]);
 
   return (
     <main>
-      <Navbar visible={isVisible}/>
+      <Navbar visible={isVisible} smallDevice={isSmallDevice}/>
       <Home />
       <About />
       <Projects />

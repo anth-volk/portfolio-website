@@ -53,12 +53,13 @@ export default function Medium() {
     }
     else if (error) {
         return (
-            <p>{`Module error: {error}`}</p>
+            <p>{`Module error: ${error}`}</p>
         );
     }
     else {
 
         const articleJSX = data.map( (item, index) => {
+
             return (
                 <div className="Medium_card" key={index}>
                     <h1 className="Medium_cardTitle">{item.title}</h1>

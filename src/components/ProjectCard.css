@@ -4,6 +4,7 @@
     aspect-ratio: 16/9;
 }
 
+/* Based on tutorial from https://www.w3schools.com/howto/howto_css_flip_card.asp */
 .Projects_containerInner {
     position: relative;
     width: 100%;
@@ -79,4 +80,62 @@
     font-size: 1vw;
     float: left;
     margin-right: 0.5vw;
+}
+
+@media screen and (max-width: 991px) {
+    .Projects_itemTitle {
+        font-size: 2vw;
+    }
+
+    .Projects_itemDesc {
+        font-size: 1.5vw;
+    }
+
+    .Projects_itemTagsList > li {
+        font-size: 1.25vw;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .Projects_containerInner {
+        transition: none;
+        transform-style: none;
+    }
+
+    .Projects_containerInner:active,
+    .Projects_containerInner:hover,
+    .Projects_containerInner:focus {
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .Projects_containerItem:hover .Projects_containerInner {
+        transform: none;
+    }
+
+    .Projects_containerItem-inactive,
+    .Projects_containerItem-active {
+        backface-visibility: visible;
+    }
+
+    .Projects_containerItem-inactive {
+        display: none;
+    }
+
+    .Projects_containerItem-active {
+        transform: none;
+    }
+
+    .Projects_itemTitle {
+        font-size: 6vw;
+    }
+
+    .Projects_itemDesc {
+        font-size: 4vw;
+    }
+
+    .Projects_itemTagsList > li {
+        font-size: 3vw;
+        margin-right: 2vw;
+    }
+
 }

@@ -29,9 +29,11 @@ export default function Home() {
                     </div>
                     <p className={`Home_text-bracket ${isHovering? "active": ""}`}>{"}"}</p>
 
-                    {/* All on one line to ensure spaces after commas */}
-                    <p className="App_text-primaryColor"><a href="https://www.linkedin.com/in/anthonyvolk/" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin"></i>LinkedIn</a>  <a href="https://github.com/anth-volk" target="_blank" rel="noreferrer"><i className="fa-brands fa-square-github"></i>GitHub</a>  <a href="mailto:anth.volk@gmail.com" target="_blank" rel="noreferrer"><i className="fa-solid fa-envelope"></i>Email</a></p>
-                    <p className="App_text-primaryColor"><a href="https://codepen.io/anth-volk" target="_blank" rel="noreferrer"><i className="fa-brands fa-codepen"></i>CodePen</a>  <a href="https://codesandbox.io/u/anth-volk" target="_blank" rel="noreferrer"><i className="fa-regular fa-square"></i>CodeSandbox</a>  <a href="https://www.codewars.com/users/anth-volk" target="_blank" rel="noreferrer"><i className="fa-solid fa-fan"></i>CodeWars</a> </p>
+                    <div className="Home_text-socials">
+                        <p className="App_text-primaryColor"><a href="https://www.linkedin.com/in/anthonyvolk/" target="_blank" rel="noreferrer">LinkedIn</a>,</p>
+                        <p className="App_text-primaryColor"><a href="https://github.com/anth-volk" target="_blank" rel="noreferrer">GitHub</a>,</p>  
+                        <p className="App_text-primaryColor"><a href="mailto:anth.volk@gmail.com" target="_blank" rel="noreferrer">Email</a></p>
+                    </div>
 
                 </div>
                 <div className="Home_wrapperRight">

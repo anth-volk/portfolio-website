@@ -1,17 +1,22 @@
 .Medium_card {
     width: 100%;
+    padding-bottom: 1em;
     border-bottom: 1px solid gray;
 }
 
 .Medium_cardTitle {
     font-size: var(--nav-text-size);
-    padding: 0.5em 0 0 0;
+    padding: 1em 0 0 0;
     text-decoration: underline calc(0.125 * var(--nav-text-size)) solid var(--accent-color);
 }
 
 .Medium_cardDate {
     font-size: calc(0.75 * var(--text-font-size));
     font-style: italic;
+}
+
+.Medium_cardContent {
+    padding-top: 0.5em;
 }
 
 .medium-feed-item {
@@ -32,4 +37,15 @@
 .medium-feed-image img {
     max-height: 180px;
     width: auto;
+}
+
+@media screen and (max-width: 575px) {
+    .Medium_card {
+        padding-bottom: 2em;
+    }
+
+    .medium-feed-image {
+        float: none;
+        text-align: center;
+    }
 }

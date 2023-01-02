@@ -10,17 +10,17 @@
 .Contact p {
     font-size: 2em;
     text-align: center;
-    padding-bottom: 1em;
 }
 
 .Contact_container {
     min-height: 0;
     flex: 1;
     display: flex;
-    padding-bottom: 3em;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
+    gap: 1em;
+    margin-bottom: 4em;
 }
 
 .Contact_emphasisText {
@@ -35,17 +35,35 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 16px;
 }
 
 .Contact_socialWrapper a {
     display: inline;
     color: unset;
     position: relative;
-    padding: 0 8px;
     font-size: 0.9em;
     font-family: var(--sans-serif-font);
 }
 
 .Contact_socialWrapper i {
     position: relative;
+}
+
+@media screen and (max-width: 991px) {
+    .Contact p {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .Contact_socialWrapper a {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .Contact p {
+        font-size: 1em;
+    }
 }
