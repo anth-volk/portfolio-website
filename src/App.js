@@ -41,9 +41,7 @@ function App() {
       then add height of page to find absolute height of About */
       let aboutAbsPos = document.getElementById("about").getBoundingClientRect().top + window.scrollY;
 
-      // Add scroll event listener
-      document.addEventListener("scroll", (e) => {
-
+      function handleScroll(event) {
         /* If window.scrollY is greater than aboutAbsPos, 
         set isVisible to true, else set false */
         if (window.scrollY >= aboutAbsPos) {
@@ -52,7 +50,12 @@ function App() {
         else {
           setIsVisible(false);
         }
-      })
+      }
+
+      // Add scroll event listener and then clean up
+      document.addEventListener("scroll", handleScroll)
+      return () => document.removeEventListener("scroll", handleScroll);
+
     }
 
     }, [isVisible, isSmallDevice, viewportWidth]);
