@@ -1,5 +1,4 @@
 import './UnderConstruction.css';
-import '../index.css';
 
 export default function UnderConstruction() {
     return (
