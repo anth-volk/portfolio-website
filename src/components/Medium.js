@@ -13,7 +13,10 @@ export default function Medium() {
     const [error, setError] = useState(null);
 
     const RSS2JSON = "https://api.rss2json.com/v1/api.json?rss_url=";
+
     const src = "https://medium.com/feed/@anth-volk";
+
+    console.log("rendered");
 
     useEffect(() => {
 
@@ -38,7 +41,8 @@ export default function Medium() {
             setData(output);
         })
         .catch(error => {
-            console.log("Error: ", error);
+            console.log(error);
+            console.log("Error: ", error.statusText);
             setError(error);
         })
         .finally(() => {
@@ -53,7 +57,7 @@ export default function Medium() {
     }
     else if (error) {
         return (
-            <p>{`Module error: ${error}`}</p>
+            <p>{`Module error: ${error.statusText}`}</p>
         );
     }
     else {
