@@ -1,0 +1,13 @@
+
+.Writing {
+    min-height: 100vh;
+    padding: var(--nav-height) var(--gutter) 0 var(--gutter);
+}
+
+.Writing_container {
+    padding: 0 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-content: stretch;
+}

@@ -1,0 +1,69 @@
+.Contact {
+    min-height: 100vh;
+    padding: var(--nav-height) var(--gutter) 0 var(--gutter);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.Contact p {
+    font-size: 2em;
+    text-align: center;
+}
+
+.Contact_container {
+    min-height: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1em;
+    margin-bottom: 4em;
+}
+
+.Contact_emphasisText {
+    font-weight: bold;
+    color: var(--primary-text-color);
+}
+
+.Contact_socialWrapper {
+    font-size: 1.75em;
+    color: var(--accent-color);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+}
+
+.Contact_socialWrapper a {
+    display: inline;
+    color: unset;
+    position: relative;
+    font-size: 0.9em;
+    font-family: var(--sans-serif-font);
+}
+
+.Contact_socialWrapper i {
+    position: relative;
+}
+
+@media screen and (max-width: 991px) {
+    .Contact p {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .Contact_socialWrapper a {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .Contact p {
+        font-size: 1em;
+    }
+}

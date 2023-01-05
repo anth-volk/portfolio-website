@@ -1,0 +1,53 @@
+.Medium_card {
+    width: 100%;
+    padding-bottom: 1em;
+    border-bottom: 1px solid gray;
+}
+
+.Medium_cardTitle {
+    font-size: var(--nav-text-size);
+    padding: 1em 0 0 0;
+    text-decoration-line: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: calc(0.125 * var(--nav-text-size));
+}
+
+.Medium_cardDate {
+    font-size: calc(0.75 * var(--text-font-size));
+    font-style: italic;
+}
+
+.Medium_cardContent {
+    padding-top: 0.5em;
+}
+
+.medium-feed-item {
+    padding-top: 0.5em;
+}
+
+.medium-feed-image {
+    float: left;
+    padding: 0 0.5em 0.5em 0.5em;
+    text-decoration: none;
+}
+
+/* Override default a styling */
+.medium-feed-image a::after {
+    content: none;
+}
+
+.medium-feed-image img {
+    max-height: 180px;
+    width: auto;
+}
+
+@media screen and (max-width: 575px) {
+    .Medium_card {
+        padding-bottom: 2em;
+    }
+
+    .medium-feed-image {
+        float: none;
+        text-align: center;
+    }
+}
