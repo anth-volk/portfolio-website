@@ -1,3 +1,3 @@
 # Netlify redirects table
-# Address           Redirect location
-/business-card      https://thunderous-tulumba-fc36f9.netlify.app
+# Address           Redirect location                                   Request code
+/business-card      https://thunderous-tulumba-fc36f9.netlify.app       301
