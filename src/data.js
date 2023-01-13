@@ -4,8 +4,8 @@ export const projectData = [
         description: "Drum machine application built in React using styled-components to practice asynchronous state management",
         techTags: [
             "React",
-            "Styled-Components",
-            "HTML"
+            "HTML/CSS",
+            "Styled-Components"
         ],
         image: "../img/drum_machine.png",
         link: "https://q4c0ni.csb.app/"
@@ -43,5 +43,16 @@ export const projectData = [
         image: "../img/portfolio.png",
         link: "http://www.anthonyvolk.com"
     },
+    {
+        name: "Mobile Business Card",
+        description: "Simple single-component React app that allows for mobile users to download my contact information and connect with me via social media",
+        techTags: [
+            "React",
+            "HTML/CSS",
+            "VCF"
+        ],
+        image: "../img/business_card.png",
+        link: "http://www.anthonyvolk.com/business-card"
+    }
 
 ];
