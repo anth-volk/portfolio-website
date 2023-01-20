@@ -1,5 +1,16 @@
 export const projectData = [
     {
+        name: "macOS Calculator Clone",
+        description: "Browser-based clone of macOS desktop calculator application built using React in an effort to practice complex forms of state",
+        techTags: [
+            "React",
+            "HTML",
+            "CSS"
+        ],
+        image: "../img/calculator.png",
+        link: "https://8miwnq.csb.app/"
+    },
+    {
         name: "Drum Machine",
         description: "Drum machine application built in React using styled-components to practice asynchronous state management",
         techTags: [
