@@ -65,7 +65,6 @@ function App() {
       <Home />
       <About />
       <Projects />
-      {/* <Writing />*/}
       <Contact />
     </main>
 
