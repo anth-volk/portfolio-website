@@ -5,10 +5,12 @@
 /* ROOT VARS */
 
 :root {
-  --site-background-color: #36383a;
-  --primary-text-color: white;
-  --secondary-text-color: #aaa;
-  --accent-color: #00ac0f;
+  --dark: #121212;
+  --light: #ccccce;
+  --red: #be666f;
+  --blue: #67989e;
+  --yellow: #dec467;
+  --subdued-text-color: #777;
   --gothic-font: 'Bebas Neue', 'Verdana', Arial, sans-serif;
   --sans-serif-font: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   --gutter: 6.25vw;
@@ -99,7 +101,7 @@ h2 {
 
 p, li {
   font-family: var(--sans-serif-font);
-  color: var(--secondary-text-color);
+  color: var(--light);
   font-size: var(--text-font-size);
 }
 

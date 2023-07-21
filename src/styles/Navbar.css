@@ -6,7 +6,7 @@
     height: var(--nav-height);
     padding: 0 var(--gutter);
     z-index: 3;
-    background-color: var(--site-background-color);
+    background-color: var(--dark);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -33,15 +33,15 @@
 }
 
 .Navbar_logo {
-    color: var(--primary-text-color);
+    color: var(--light);
     font-weight: bold;
     font-family: var(--sans-serif-font);
     font-size: var(--nav-text-size);
 }
 
 .Navbar_button {
-    background-color: var(--site-background-color);
-    color: var(--primary-text-color);
+    background-color: var(--dark);
+    color: var(--light);
     border: 1px solid #666;
     border-radius: 4px;
     line-height: 16px;
@@ -104,8 +104,8 @@
 .Navbar_link--dropdown {
     width: 100%;
     font-size: var(--nav-text-size);
-    color: var(--primary-text-color);
-    background-color: var(--site-background-color);
+    color: var(--light);
+    background-color: var(--dark);
     list-style: none;
     display: block;
     padding: 0.6em 0;
