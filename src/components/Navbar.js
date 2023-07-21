@@ -28,8 +28,8 @@ export default function Navbar(props) {
                         <a href="#about">
                             <li className="Navbar_link--dropdown" onClick={handleDropdownSelected}>about</li>
                         </a>
-                        <a href="#projects">
-                            <li className="Navbar_link--dropdown" onClick={handleDropdownSelected}>projects</li>
+                        <a href="#work">
+                            <li className="Navbar_link--dropdown" onClick={handleDropdownSelected}>work</li>
                         </a>
                         <a href="#contact">
                             <li className="Navbar_link--dropdown" onClick={handleDropdownSelected}>contact</li>
