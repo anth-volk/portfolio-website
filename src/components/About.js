@@ -1,5 +1,5 @@
 // Internal imports
-import './About.css';
+import '../styles/About.css';
 import Pdf from '../assets/volk-anthony-resume.pdf';
 import Img from '../assets/volk-anthony-img.png';
 

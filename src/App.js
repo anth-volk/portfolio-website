@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Internal imports
-import './App.css';
+import './styles/App.css';
 import Home from './components/Home.js';
 import Navbar from './components/Navbar.js';
 import About from './components/About.js';

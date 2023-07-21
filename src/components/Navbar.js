@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 // Internal imports
-import './Navbar.css';
+import '../styles/Navbar.css';
 
 export default function Navbar(props) {
 

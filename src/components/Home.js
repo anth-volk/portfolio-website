@@ -2,7 +2,7 @@
 import {useState} from 'react';
 
 // Internal imports
-import './Home.css';
+import '../styles/Home.css';
 
 export default function Home() {
 
