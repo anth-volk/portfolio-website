@@ -27,7 +27,7 @@
 
 .Navbar_navList ul li {
     font-size: var(--nav-text-size);
-    font-family: var(--mono-font);
+    font-family: var(--sans-serif-font);
     padding-left: 0;
     list-style: none;
     transition: color 0.4s ease-in-out;
@@ -36,7 +36,7 @@
 .Navbar_logo {
     color: var(--primary-text-color);
     font-weight: bold;
-    font-family: var(--mono-font);
+    font-family: var(--sans-serif-font);
     font-size: var(--nav-text-size);
 }
 
