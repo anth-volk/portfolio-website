@@ -9,8 +9,8 @@ export default function Navigation({isSmallDevice}) {
 
 	const LINKS = [
 		{
-			text: 'home',
-			url: '#home'
+			text: 'about',
+			url: '#about'
 		},
 		{
 			text: 'work',
