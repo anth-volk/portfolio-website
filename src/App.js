@@ -4,10 +4,9 @@ import React, { useState, useEffect } from 'react';
 // Internal imports
 import './styles/App.css';
 import Home from './components/Home.js';
-import Navbar from './components/Navbar.js';
+import Navigation from './components/Navigation.js';
 import About from './components/About.js';
 import Projects from './components/Projects.js';
-// import Writing from './components/Writing.js';
 import Contact from './components/Contact.js';
 
 function App() {
@@ -62,7 +61,7 @@ function App() {
 
   return (
     <main>
-      <Navbar visible={isVisible} smallDevice={isSmallDevice}/>
+      <Navigation isSmallDevice={isSmallDevice}/>
       <Home />
       <About />
       <Projects />
