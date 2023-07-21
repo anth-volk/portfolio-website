@@ -71,7 +71,7 @@ picture {
 /* SITE-WIDE STYLING: PAGE SECTION STYLING */
 
 html {
-  background-color: var(--site-background-color);
+  background-color: var(--dark);
 }
 
 /* SITE-WIDE STYLING: TEXT STYLING */
