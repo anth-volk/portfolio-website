@@ -31,9 +31,6 @@ export default function Navbar(props) {
                         <a href="#projects">
                             <li className="Navbar_link--dropdown" onClick={handleDropdownSelected}>projects</li>
                         </a>
-                        <a href="#writing">
-                            <li className="Navbar_link--dropdown" onClick={handleDropdownSelected}>writing</li>
-                        </a>
                         <a href="#contact">
                             <li className="Navbar_link--dropdown" onClick={handleDropdownSelected}>contact</li>
                         </a>
@@ -53,7 +50,6 @@ export default function Navbar(props) {
                     <ul>
                         <a href="#about"><li className="Navbar_link">about</li></a>
                         <a href="#projects"><li className="Navbar_link">projects</li></a>
-                        <a href="#writing"><li className="Navbar_link">writing</li></a>
                         <a href="#contact"><li className="Navbar_link">contact</li></a>
                     </ul>
 

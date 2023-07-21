@@ -39,7 +39,6 @@ export default function Home() {
                 <div className="Home_wrapperRight">
                     <a href="#about"><h1 className="App_cursor-pointer Home_navText">about</h1></a>
                     <a href="#projects"><h1 className="App_cursor-pointer Home_navText">projects</h1></a>
-                    <a href="#writing"><h1 className="App_cursor-pointer Home_navText">writing</h1></a>
                     <a href="#contact"><h1 className="App_cursor-pointer Home_navText">contact</h1></a>
                 </div>
             </div>
