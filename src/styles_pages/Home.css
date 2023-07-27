@@ -1,12 +1,11 @@
 
 .Home {
-    min-height: 90vh;
-    padding: 0;
+	height: 100vh;
+    padding: var(--nav-height) var(--gutter) 0 var(--gutter);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: stretch;
-	margin: 0 var(--gutter);
 }
 
 /*
