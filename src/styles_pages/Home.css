@@ -1,13 +1,15 @@
 
 .Home {
-    min-height: 100vh;
+    min-height: 90vh;
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
+	margin: 0 var(--gutter);
 }
 
+/*
 .Home_wrapper {
     height: 100%;
     width: 100%;
@@ -115,3 +117,4 @@
         display: none;
     }
 }
+*/

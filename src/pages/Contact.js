@@ -1,5 +1,5 @@
 //Internal imports
-import '../styles/Contact.css';
+import '../styles_pages/Contact.css';
 
 export default function Contact() {
 

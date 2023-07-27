@@ -1,5 +1,5 @@
 //Internal imports
-import '../styles/ProjectCard.css';
+import '../styles_pages/ProjectCard.css';
 
 export default function ProjectCard({obj, index}) {
 

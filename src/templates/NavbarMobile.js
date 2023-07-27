@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 
 // Internal imports
-import '../styles/Navbar.css';
+import '../styles_pages/Navbar.css';
 
 export default function NavbarMobile({navLinks}) {
 

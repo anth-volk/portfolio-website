@@ -2,11 +2,11 @@
 import {useState} from 'react';
 
 // Internal imports
-import '../styles/Home.css';
-import Home from '../templates/Home.js';
+import '../styles_pages/Home.css';
 
 export default function Home() {
 
+	/*
     const [isHovering, setIsHovering] = useState(false);
 
     const handleMouseOver = () => {
@@ -16,7 +16,18 @@ export default function Home() {
     const handleMouseOut = () => {
         setIsHovering(false);
     };
+	*/
 
+	return (
+		<section className='Home'>
+			<Headline />
+			<ResumeBox />
+			<TagCloud />
+		</section>
+	)
+
+
+	/*
     return (
         <section className="Home" id="home">
             <div className="Home_wrapper">
@@ -45,4 +56,5 @@ export default function Home() {
             </div>
         </section>
     );
+	*/
 }
