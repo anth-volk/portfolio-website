@@ -3,6 +3,9 @@ import {useState} from 'react';
 
 // Internal imports
 import '../styles_pages/Home.css';
+import Headline from '../components/Headline.js';
+import ResumeBox from '../components/ResumeBox.js';
+import TagCloud from '../components/TagCloud.js';
 
 export default function Home() {
 
