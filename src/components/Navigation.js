@@ -4,34 +4,20 @@ import React from 'react';
 // Internal imports
 import NavbarDesktop from '../templates/NavbarDesktop.js';
 import NavbarMobile from '../templates/NavbarMobile.js';
+import { navLinks } from '../data/navLinks.js';
 
 export default function Navigation({isSmallDevice}) {
-
-	const LINKS = [
-		{
-			text: 'about',
-			url: '#about'
-		},
-		{
-			text: 'work',
-			url: '#work'
-		},
-		{
-			text: 'contact',
-			url: '#contact'
-		}
-	];
 
 	// If displayed on small device, use mobile template
 	if (isSmallDevice) {
 		return (
-			<NavbarMobile links={LINKS}/>
+			<NavbarMobile navLinks={navLinks}/>
 		)
 	}
 
 	else {
 		return (
-			<NavbarDesktop links={LINKS} />
+			<NavbarDesktop navLinks={navLinks} />
 		)
 	}
 

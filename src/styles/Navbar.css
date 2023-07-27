@@ -20,7 +20,9 @@
     align-items: center;
     text-decoration: none;
     padding-left: 0px;
+	position: relative;
 }
+
 
 /* Navbar text effects */
 
@@ -29,7 +31,41 @@
     font-family: var(--sans-serif-font);
     padding-left: 0;
     list-style: none;
-	padding-left: 3vw;
+	margin-left: 3vw;
+	position: relative;
+}
+
+/* Add underline styling for nav item on hover */
+
+.Navbar_link::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 100%;
+	bottom: -0.05em;
+	background: var(--light);
+	height: 0.075em;
+	transition: right 0.4s ease-in-out;
+}
+
+/* Color overrides for styled underlines */
+.Navbar_link--red::after {
+	background: var(--red);
+}
+
+.Navbar_link--blue::after {
+	background: var(--blue);
+}
+
+.Navbar_link--yellow::after {
+	background: var(--yellow);
+}
+
+.Navbar_link:hover::after,
+.Navbar_link:focus::after,
+.Navbar_link:active::after {
+	right: 0;
 }
 
 .Navbar_logo {

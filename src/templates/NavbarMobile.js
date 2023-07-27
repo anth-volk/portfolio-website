@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 // Internal imports
 import '../styles/Navbar.css';
 
-export default function NavbarMobile({links}) {
+export default function NavbarMobile({navLinks}) {
 
 	const [isDropdownSelected, setIsDropdownSelected] = useState(false);
 
@@ -12,7 +12,7 @@ export default function NavbarMobile({links}) {
 		setIsDropdownSelected(prevState => !prevState);
 	};
 
-	const linkSection = links.map( (entry, index) => {
+	const linkSection = navLinks.map( (entry, index) => {
 		return (
 			<a href={entry.url}>
 				<li className='Navbar_link--dropdown' onClick={handleDropdownSelected}>{entry.text}</li>
