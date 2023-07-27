@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 
 // Internal imports
 import './styles/App.css';
-import Home from './components/Home.js';
-import Navigation from './components/Navigation.js';
-import About from './components/About.js';
-import Projects from './components/Projects.js';
-import Contact from './components/Contact.js';
+import Home from './pages/Home.js';
+import Navigation from './pages/Navigation.js';
+import About from './pages/About.js';
+import Projects from './pages/Projects.js';
+import Contact from './pages/Contact.js';
 
 function App() {
 
