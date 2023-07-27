@@ -3,6 +3,7 @@ import {useState} from 'react';
 
 // Internal imports
 import '../styles/Home.css';
+import Home from '../templates/Home.js';
 
 export default function Home() {
 
