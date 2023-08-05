@@ -1,4 +1,4 @@
-
+import React from 'react';
 
 // Local imports
 import { tagCloudData } from '../data/tagCloudData.js';
