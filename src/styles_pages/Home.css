@@ -1,11 +1,19 @@
 
 .Home {
 	height: 100vh;
-    padding: var(--nav-height) var(--gutter) 0 var(--gutter);
+    padding: var(--nav-height) var(--gutter);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
+}
+
+.Home_bottomBox {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
 }
 
 /*

@@ -4,7 +4,7 @@ import {useState} from 'react';
 // Internal imports
 import '../styles_pages/Home.css';
 import Headline from '../components/Headline.js';
-import ResumeBox from '../components/ResumeBox.js';
+import ContactBox from '../components/ContactBox.js';
 import TagCloud from '../components/TagCloud.js';
 
 export default function Home() {
@@ -24,8 +24,10 @@ export default function Home() {
 	return (
 		<section className='Home'>
 			<Headline />
-			<ResumeBox />
-			<TagCloud />
+			<div className='Home_bottomBox'>
+				<ContactBox />
+				<TagCloud />
+			</div>
 		</section>
 	)
 

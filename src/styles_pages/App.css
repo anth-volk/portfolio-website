@@ -165,6 +165,18 @@ p > a:active::after,
   color: var(--primary-text-color);
 }
 
+.App_primaryButton {
+	background-color: var(--red);
+	color: var(--light);
+	font-size: var(--text-font-size);
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	font-weight: medium;
+	letter-spacing: -3%;
+}
+
 /* SITE-WIDE STYLING: FORM & CLICK ELEMENTS */
 
 a.button {
