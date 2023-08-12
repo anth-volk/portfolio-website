@@ -2,6 +2,7 @@ import React from 'react';
 
 // Local imports
 import { tagCloudData } from '../data/tagCloudData.js';
+import '../styles_components/TagCloud.css';
 
 const CONTENT = 'content';
 
@@ -49,9 +50,11 @@ export default function TagCloud() {
 	});
 
 	return (
-		<>
-			{tagCloudHeaders}
+		<div className='TagCloud'>
+			<div className='TagCloud_headers'>
+				{tagCloudHeaders}
+			</div>
 			{tagCloudContentWrapper}
-		</>
+		</div>
 	)
 }
