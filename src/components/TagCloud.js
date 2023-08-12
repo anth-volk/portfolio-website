@@ -2,18 +2,24 @@ import React from 'react';
 
 // Local imports
 import { tagCloudData } from '../data/tagCloudData.js';
+import { colors } from '../data/colors.js';
 import '../styles_components/TagCloud.css';
 
 const CONTENT = 'content';
 
 export default function TagCloud() {
+	
+	const colorKeys = Object.keys(colors);
 
 	// Use the "headers" from the tag cloud data to create a row of three
 	// hoverable links; this will be placed above the tag cloud section
 	const tagCloudHeaders = tagCloudData.map( (obj, index) => {
 
+		// Use the index from 'navLinks.map' to determine the index of 'colorKeys' we'll apply
+		const colorSelector = index % colorKeys.length;
+
 		return (
-			<p key={index} className='TagCloud_header'>{obj.header.toLowerCase()}</p>
+			<p key={index} className={`TagCloud_header TagCloud_header--${colorKeys[colorSelector]}`}>{obj.header.toLowerCase()}</p>
 		);
 
 	});
