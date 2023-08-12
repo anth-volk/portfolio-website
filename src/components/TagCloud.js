@@ -19,13 +19,13 @@ export default function TagCloud() {
 
 	// Create a wrapper for each tag cloud; these will be positioned
 	// absolutely and sit on top of one another
-	const tagCloudContentWrapper = tagCloudData.map( (obj) => {
+	const tagCloudContentWrapper = tagCloudData.map( (obj, index) => {
 
 		// If the obj has a 'content' section, just return a styled
 		// p out of it
 		if (CONTENT in obj) {
 			return (
-				<p className='TagCloud_block'>{obj.content}</p>
+				<p key={index} className='TagCloud_block'>{obj.content}</p>
 			);
 		}
 		// Otherwise, do two steps
@@ -33,13 +33,13 @@ export default function TagCloud() {
 			// First, place individual tags into p's
 			const tagCloudTags = obj.tags.map( (tag) => {
 				return (
-					<p className='TagCloud_tag'>{tag}</p>
+					<p key={tag} className='TagCloud_tag'>{tag}</p>
 				);
 			});
 
 			// Then, place all of these into a div wrapper
 			return (
-				<div className='TagCloud_cloud'>
+				<div key={index} className='TagCloud_cloud'>
 					{tagCloudTags}
 				</div>
 			);
