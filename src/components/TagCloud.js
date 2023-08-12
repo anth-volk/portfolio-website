@@ -9,10 +9,10 @@ export default function TagCloud() {
 
 	// Use the "headers" from the tag cloud data to create a row of three
 	// hoverable links; this will be placed above the tag cloud section
-	const tagCloudHeaders = tagCloudData.map( (obj) => {
+	const tagCloudHeaders = tagCloudData.map( (obj, index) => {
 
 		return (
-			<p className='TagCloud_header'>{obj.header.toLowerCase()}</p>
+			<p key={index} className='TagCloud_header'>{obj.header.toLowerCase()}</p>
 		);
 
 	});
