@@ -18,6 +18,7 @@
   --text-font-size: 1.125rem;
   --nav-text-size: 1.25rem;
   --nav-height: 50px;
+  --transition: 0.4s ease-in-out;
 }
 
 /* STYLE RESET (inspired by https://piccalil.li/blog/a-modern-css-reset/) */
@@ -140,7 +141,7 @@ p > a::after,
   bottom: -0.05em;
   background: var(--blue);
   height: 0.125em;
-  transition: right 0.4s ease-in-out;
+  transition: right var(--transition);
 }
 
 p > a:hover::after,
@@ -207,7 +208,7 @@ a.button {
     var(--blue) 50%,
     var(--blue));
   background-size: 100% 202%;
-  transition: background 0.4s ease-in-out;
+  transition: background var(--transition);
 }
 
 .App_text-callout:hover {

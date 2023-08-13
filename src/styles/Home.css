@@ -11,10 +11,12 @@
 .Home_bottomBox {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: flex-start;
 	height: 100%;
 	padding-top: 2rem;
+	width: 100%;
+	gap: 10vw;
 }
 
 /*

@@ -55,10 +55,15 @@ export default function TagCloud() {
 		}
 		// Otherwise, do two steps
 		else {
+
 			// First, place individual tags into p's
-			const tagCloudTags = obj.tags.map( (tag) => {
+			const tagCloudTags = obj.tags.map( (tag, index) => {
+
+				// Determine tag cloud tag color
+				const colorSelector = index % colorKeys.length;
+
 				return (
-					<p key={tag} className='TagCloud_tag'>{tag}</p>
+					<p key={tag} className={`TagCloud_tag TagCloud_tag--${colorKeys[colorSelector]}`}>{tag}</p>
 				);
 			});
 
@@ -81,7 +86,9 @@ export default function TagCloud() {
 			<div className='TagCloud_headers'>
 				{tagCloudHeaders}
 			</div>
-			{tagCloudContentWrapper}
+			<div className='TagCloud_wrapper'>
+				{tagCloudContentWrapper}
+			</div>
 		</div>
 	)
 }
