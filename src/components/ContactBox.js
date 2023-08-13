@@ -10,9 +10,11 @@ export default function ContactBox() {
 	return (
 		<div className='ContactBox'>
 			<img src={Headshot} alt='Headshot of Anthony Volk' className='ContactBox_image'/>
-			<button className='App_primaryButton' type='button'>
-				contact
-			</button>
+			<a href='#contact' rel='noreferrer'>
+				<button className='App_primaryButton' type='button'>
+					contact
+				</button>
+			</a>
 		</div>
 	)
 }
