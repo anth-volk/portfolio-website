@@ -4,8 +4,6 @@ import React from 'react';
 import '../styles/ContactBox.css';
 import Headshot from '../assets/volk-anthony-img.png';
 
-// TO ADD: Resume link; alternatively, build a resume page?
-
 export default function ContactBox() {
 	return (
 		<div className='ContactBox'>

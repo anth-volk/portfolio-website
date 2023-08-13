@@ -19,7 +19,6 @@
 
 .Headline_scrollContainer:hover > * {
 	animation: textScroller 8s linear infinite;
-	animation-delay: 0.1s;
 }
 
 .Headline_scrollWrapper {
@@ -41,11 +40,14 @@
 	letter-spacing: -2px;
 	line-height: 100%;
 	visibility: visible;
+	opacity: 1.0;
+	transition: opacity var(--transition);
 }
 
 /* Overrididing styles */
 .Headline_text--hidden {
 	visibility: hidden;
+	opacity: 0;
 }
 
 /* Keyframes */
