@@ -31,6 +31,17 @@ export default function Headline() {
 					<h1 className={`Headline_text ${!isMouseOver ? `Headline_text--hidden` : ``}`}>Language Learner.</h1>
 					<h1 className={`Headline_text ${!isMouseOver ? `Headline_text--hidden` : ``}`}>Cat Lover.</h1>
 				</div>
+				<div 
+					className='Headline_scrollWrapper' 
+					onMouseOver={handleMouseOver} 
+					onMouseOut={handleMouseOut}
+				>
+					<h1 className={`Headline_text ${!isMouseOver ? `Headline_text--hidden` : ``}`}>Full-Stack Developer.</h1>
+					<h1 className={`Headline_text ${!isMouseOver ? `Headline_text--hidden` : ``}`}>Ethical Technologist.</h1>
+					<h1 className={`Headline_text ${!isMouseOver ? `Headline_text--hidden` : ``}`}>Culture Junkie.</h1>
+					<h1 className={`Headline_text ${!isMouseOver ? `Headline_text--hidden` : ``}`}>Language Learner.</h1>
+					<h1 className={`Headline_text ${!isMouseOver ? `Headline_text--hidden` : ``}`}>Cat Lover.</h1>
+				</div>
 			</div>
 		</div>
 	)

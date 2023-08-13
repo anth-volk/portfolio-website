@@ -1,5 +1,6 @@
 :root {
 	--headline-size: 6rem;
+	--scroller-padding: 6rem;
 }
 
 .Headline {
@@ -13,10 +14,11 @@
 	justify-content: flex-start;
 	align-items: center;
 	width: 100%;
+	overflow: hidden;
 }
 
-.Headline_scrollContainer:hover > .Headline_scrollWrapper {
-	animation: textScroller 5s linear infinite;
+.Headline_scrollContainer:hover > * {
+	animation: textScroller 8s linear infinite;
 }
 
 .Headline_scrollWrapper {
@@ -26,7 +28,8 @@
 	align-items: center;
 	flex-wrap: nowrap;
 	height: var(--headline-size);
-	gap: 2rem;
+	gap: var(--scroller-padding);
+	padding-right: var(--scroller-padding);
 }
 
 .Headline_text {
@@ -52,7 +55,7 @@
 /* Keyframes */
 @keyframes textScroller {
 	0% {
-		transform: translateX(0);
+		transform: translateX(0%);
 	}
 	100% {
 		transform: translateX(-100%);
