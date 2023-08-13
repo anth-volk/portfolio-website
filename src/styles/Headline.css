@@ -1,13 +1,60 @@
+:root {
+	--headline-size: 6rem;
+}
+
 .Headline {
 	width: 100%;
 	margin-top: 1.25rem;
 }
 
+.Headline_scrollContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+}
+
+.Headline_scrollContainer:hover > .Headline_scrollWrapper {
+	animation: textScroller 5s linear infinite;
+}
+
+.Headline_scrollWrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: nowrap;
+	height: var(--headline-size);
+	gap: 2rem;
+}
+
 .Headline_text {
+	white-space: nowrap;
 	font-family: var(--gothic-font);
 	color: var(--light);
 	padding: 0;
-	font-size: 6rem;
+	font-size: var(--headline-size);
 	letter-spacing: -2px;
 	line-height: 100%;
+	visibility: visible;
+}
+
+/* Overrididing styles */
+.Headline_text--noAbs {
+	position: initial;
+}
+
+.Headline_text--hidden {
+	visibility: hidden;
+}
+
+/* Keyframes */
+@keyframes textScroller {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
 }
