@@ -35,7 +35,6 @@
 .Headline_text {
 	white-space: nowrap;
 	font-family: var(--gothic-font);
-	color: var(--light);
 	padding: 0;
 	font-size: var(--headline-size);
 	letter-spacing: -2px;
@@ -44,10 +43,6 @@
 }
 
 /* Overrididing styles */
-.Headline_text--noAbs {
-	position: initial;
-}
-
 .Headline_text--hidden {
 	visibility: hidden;
 }
