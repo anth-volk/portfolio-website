@@ -22,7 +22,7 @@ export default function Home() {
 	*/
 
 	return (
-		<section className='Home'>
+		<section className='Home' id='home'>
 			<Headline />
 			<div className='Home_bottomBox'>
 				<ContactBox />
