@@ -19,6 +19,7 @@
 
 .Headline_scrollContainer:hover > * {
 	animation: textScroller 8s linear infinite;
+	animation-delay: 0.1s;
 }
 
 .Headline_scrollWrapper {
