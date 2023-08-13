@@ -2,7 +2,7 @@
 import {useState} from 'react';
 
 // Internal imports
-import '../styles_pages/Home.css';
+import '../styles/Home.css';
 import Headline from '../components/Headline.js';
 import ContactBox from '../components/ContactBox.js';
 import TagCloud from '../components/TagCloud.js';

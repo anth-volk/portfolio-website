@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Internal imports
-import './styles_pages/App.css';
+import './styles/App.css';
 import Home from './pages/Home.js';
 import Navigation from './pages/Navigation.js';
 import About from './pages/About.js';

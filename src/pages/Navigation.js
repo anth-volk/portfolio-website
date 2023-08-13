@@ -2,8 +2,8 @@
 import React from 'react';
 
 // Internal imports
-import NavbarDesktop from '../templates/NavbarDesktop.js';
-import NavbarMobile from '../templates/NavbarMobile.js';
+import NavbarDesktop from '../components/NavbarDesktop.js';
+import NavbarMobile from '../components/NavbarMobile.js';
 import { navLinks } from '../data/navLinks.js';
 
 export default function Navigation({isSmallDevice}) {

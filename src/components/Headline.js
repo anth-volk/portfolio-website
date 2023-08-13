@@ -1,5 +1,5 @@
 // Internal imports
-import '../styles_components/Headline.css';
+import '../styles/Headline.css';
 
 export default function Headline() {
 

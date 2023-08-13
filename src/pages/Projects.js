@@ -1,5 +1,5 @@
 // Internal imports
-import '../styles_pages/Projects.css';
+import '../styles/Projects.css';
 import {projectData} from '../data.js';
 import ProjectCard from './ProjectCard.js';
 

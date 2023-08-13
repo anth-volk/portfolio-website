@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Local imports
 import { tagCloudData } from '../data/tagCloudData.js';
 import { colors } from '../data/colors.js';
-import '../styles_components/TagCloud.css';
+import '../styles/TagCloud.css';
 
 const CONTENT = 'content';
 
 export default function TagCloud() {
+
+	// State to represent header to be listed as active
+	const [activeHeaderIndex, setActiveHeaderIndex] = useState(0);
+
+	function handleHeaderMouseOver(index) {
+		setActiveHeaderIndex(index);
+	}
 	
 	const colorKeys = Object.keys(colors);
 
@@ -19,7 +26,13 @@ export default function TagCloud() {
 		const colorSelector = index % colorKeys.length;
 
 		return (
-			<p key={index} className={`TagCloud_header TagCloud_header--${colorKeys[colorSelector]}`}>{obj.header.toLowerCase()}</p>
+			<p 
+				key={index} 
+				onMouseOver={() => handleHeaderMouseOver(index)} 
+				className={`TagCloud_header TagCloud_header--${colorKeys[colorSelector]} ${activeHeaderIndex === index ? `TagCloud_header--active` : ``}`}
+			>
+				{obj.header.toLowerCase()}
+			</p>
 		);
 
 	});
@@ -32,7 +45,12 @@ export default function TagCloud() {
 		// p out of it
 		if (CONTENT in obj) {
 			return (
-				<p key={index} className='TagCloud_block'>{obj.content}</p>
+				<p 
+					key={index} 
+					className={`TagCloud_block ${activeHeaderIndex !== index ? `TagCloud_block--hidden`: ``}`}
+				>
+					{obj.content}
+				</p>
 			);
 		}
 		// Otherwise, do two steps
@@ -46,7 +64,10 @@ export default function TagCloud() {
 
 			// Then, place all of these into a div wrapper
 			return (
-				<div key={index} className='TagCloud_cloud'>
+				<div 
+					key={index} 
+					className={`TagCloud_cloud ${activeHeaderIndex !== index ? `TagCloud_cloud--hidden` : ``}`}
+				>
 					{tagCloudTags}
 				</div>
 			);

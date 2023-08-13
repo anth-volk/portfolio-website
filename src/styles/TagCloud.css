@@ -50,6 +50,12 @@
 
 .TagCloud_header:hover::after,
 .TagCloud_header:focus::after,
-.TagCloud_header:active::after {
+.TagCloud_header:active::after,
+.TagCloud_header--active::after {
 	right: 0;
+}
+
+.TagCloud_block {
+	visibility: visible;
+
 }
