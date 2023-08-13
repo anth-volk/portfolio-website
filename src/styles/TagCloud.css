@@ -65,7 +65,7 @@
 .TagCloud_block {
 	position: absolute;
 	visibility: visible;
-	font-size: 1.75rem;
+	font-size: 2rem;
 	opacity: 1.0;
 	transition: opacity var(--transition);
 }
@@ -91,7 +91,7 @@
 }
 
 .TagCloud_tag {
-	font-size: 1.75rem;
+	font-size: 2rem;
 	font-weight: 300;
 }
 
