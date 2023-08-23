@@ -8,7 +8,7 @@
 }
 
 .ContactBox_image {
-	height: 225px;
+	height: var(--home-image-height);
 	aspect-ratio: 1/1;
 	object-fit: cover;
 	object-position: 50% 0%;

@@ -1,3 +1,6 @@
+:root {
+	--home-image-height: 225px;
+}
 
 .Home {
 	height: 100vh;
