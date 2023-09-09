@@ -110,3 +110,17 @@
 .TagCloud_tag--yellow {
 	color: var(--yellow);
 }
+
+@media screen and (max-width: 1024px) {
+  .TagCloud_header {
+    font-size: 2.5rem;
+  }
+
+  .TagCloud_block {
+    font-size: 1.6rem;
+  }
+
+  .TagCloud_tag {
+    font-size: 1.6rem;
+  }
+}
