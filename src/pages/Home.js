@@ -1,11 +1,12 @@
-// External imports
-import {useState} from 'react';
 
 // Internal imports
 import '../styles/Home.css';
 import Headline from '../components/Headline.js';
 import ContactBox from '../components/ContactBox.js';
 import TagCloud from '../components/TagCloud.js';
+
+// Image imports
+import turbulence from '../assets/turbulence.png';
 
 export default function Home() {
 
@@ -22,7 +23,9 @@ export default function Home() {
 	*/
 
 	return (
+
 		<section className='Home' id='home'>
+			<image className='Home_turbulence' src={turbulence} />
 			<Headline />
 			<div className='Home_bottomBox'>
 				<ContactBox />

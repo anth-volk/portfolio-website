@@ -4,11 +4,21 @@
 
 .Home {
 	height: 100vh;
-    padding: var(--nav-height) var(--gutter);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+  padding: var(--nav-height) var(--gutter);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+	position: relative;
+}
+
+.Home_turbulence {
+	position: fixed;
+	z-index: -3;
+	width: 150%;
+	left: -25%;
+	top: -25%;
+	/*animation: turbulence 0.5s infinite;*/
 }
 
 .Home_bottomBox {
@@ -17,8 +27,31 @@
 	justify-content: space-between;
 	align-items: flex-start;
 	height: 100%;
-	padding-top: 2rem;
+	padding-top: 2.5rem;
 	width: 100%;
+}
+
+@keyframes turbulence {
+	0% {
+		top: -25%;
+		left: -25%;
+	}
+	20% {
+		top: -10%;
+		left: -15%;
+	}
+	40% {
+		top: -35%;
+		left: 0%;
+	}
+	60% {
+		top: -15%;
+		left: -35%;
+	}
+	80% {
+		top: -5%;
+		left: -45%;
+	}
 }
 
 /*

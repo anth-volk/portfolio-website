@@ -71,7 +71,7 @@
 	font-size: 2rem;
 	opacity: 1.0;
 	transition: opacity var(--transition);
-	text-align: left;
+	text-align: center;
 }
 
 .TagCloud_cloud {
