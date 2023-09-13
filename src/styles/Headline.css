@@ -61,15 +61,29 @@
 }
 
 @media screen and (max-width: 768px) {
-  .Headline_tabletLarge {
+  .Headline_large {
     font-size: calc(0.85 * var(--headline-size));
   }
   
-  .Headline_tabletSmall {
+  .Headline_small {
     font-size: calc(0.68 * var(--headline-size));
   }
 
   .Headline_scrollWrapper {
     height: calc(0.68 * var(--headline-size));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Headline_large {
+    font-size: calc(0.7 * var(--headline-size));
+  }
+
+  .Headline_small {
+    font-size: calc(0.48 * var(--headline-size));
+  }
+
+  .Headline_scrollWrapper {
+    height: calc(0.48 * var(--headline-size));
   }
 }
