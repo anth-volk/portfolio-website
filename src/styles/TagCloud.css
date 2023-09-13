@@ -141,3 +141,24 @@
   }
 
 }
+
+@media screen and (max-width: 480px) {
+  .TagCloud {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .TagCloud_headers {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .TagCloud_header {
+    font-size: calc(max(9vw, 1rem));
+  }
+
+  .TagCloud_tag {
+    font-size: calc(max(6vw, 1rem));
+  }
+}
