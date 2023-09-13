@@ -26,7 +26,7 @@ export default function NavbarMobile({navLinks}) {
 				<p className="Navbar_logo">ANTHONY VOLK</p>
 			</a>
 			<button className="Navbar_button" onClick={handleDropdownSelected} aria-expanded={isDropdownSelected}>
-				<i className="fa-solid fa-bars"></i>
+        <i className={`fa-solid fa-plus ${isDropdownSelected && "Navbar_button--rotate"}`}></i>
 			</button>
 			<div className={isDropdownSelected ? "Navbar_dropdown" : "Navbar_dropdown Navbar_noDisplay"}>
 				<ul>

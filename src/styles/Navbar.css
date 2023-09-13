@@ -1,25 +1,25 @@
 /* Navbar sections */
 
 .Navbar {
-    position: fixed;
-    width: 100vw;
-    height: var(--nav-height);
-    padding: 0 var(--gutter);
-    z-index: 3;
-    background-color: var(--dark);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: var(--nav-height);
+  padding: 0 var(--gutter);
+  z-index: 3;
+  background-color: var(--dark);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .Navbar_navList ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    text-decoration: none;
-    padding-left: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  text-decoration: none;
+  padding-left: 0px;
 	position: relative;
 }
 
@@ -27,10 +27,10 @@
 /* Navbar text effects */
 
 .Navbar_link {
-    font-size: var(--nav-text-size);
-    font-family: var(--sans-serif-font);
-    padding-left: 0;
-    list-style: none;
+  font-size: var(--nav-text-size);
+  font-family: var(--sans-serif-font);
+  padding-left: 0;
+  list-style: none;
 	margin-left: 3vw;
 	position: relative;
 }
@@ -69,34 +69,45 @@
 }
 
 .Navbar_logo {
-    color: var(--light);
-    font-weight: bold;
-    font-family: var(--sans-serif-font);
-    font-size: var(--nav-text-size);
+  color: var(--light);
+  font-weight: bold;
+  font-family: var(--sans-serif-font);
+  font-size: var(--nav-text-size);
 }
 
 .Navbar_button {
-    background-color: var(--dark);
-    color: var(--light);
-    border: 1px solid #666;
-    border-radius: 4px;
-    line-height: 16px;
-    width: 36px;
-    height: 32px;
+  background-color: var(--dark);
+  color: var(--light);
+  border: none;
+  border-radius: none;
+  line-height: 16px;
+  width: 36px;
+  height: 32px;
+  position: relative;
 }
 
 .Navbar_button > i {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    padding: 0;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 0;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem; 
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.Navbar_button:active {
-    box-shadow: inset 1px 1px 8px #111;
+.fa-plus {
+  transform: rotateZ(0deg);
+  transition: transform var(--transition);
+}
+
+.Navbar_button--rotate {
+  transform: rotateZ(45deg);
+  transition: transform var(--transition);
 }
 
 /* Override default a underlining just for navbar and replace with style similar to nav links in Home.js */
@@ -110,46 +121,52 @@
 }
 
 .Navbar_dropdown {
-    z-index: 3;
-    width: 100%;
-    position: absolute;
-    right: 0;
-    top: var(--nav-height);
-    border-top: 1px solid #666;
-    box-shadow: 0px 3px 8px rgba(0,0,0,0.6), 
-        inset 0px 0px 8px #111;
+  z-index: 3;
+  width: 100%;
+  opacity: 100%;
+  visibility: visible;
+  position: absolute;
+  padding-left: var(--gutter);
+  right: 0;
+  top: var(--nav-height);
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.6), 
+      inset 0px 0px 8px #111;
+  transition: opacity var(--transition);
 }
 
 .Navbar_dropdown > ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: right;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: right;
+  padding: 0;
+  margin: 0;
 }
 
 .Navbar_dropdownBlur {
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    overflow: hidden;
-    background-color: #222;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  overflow: hidden;
+  background-color: #222;
 }
 
 .Navbar_link--dropdown {
-    width: 100%;
-    font-size: var(--nav-text-size);
-    color: var(--light);
-    background-color: var(--dark);
-    list-style: none;
-    display: block;
-    padding: 0.6em 0;
-    text-align: right;
-    padding-right: var(--gutter);
-    border-bottom: 1px solid #666;
+  width: 100%;
+  font-size: var(--nav-text-size);
+  color: var(--light);
+  background-color: var(--dark);
+  list-style: none;
+  display: block;
+  padding-bottom: 0.6em;
+  text-align: left;
+  padding-right: var(--gutter);
 }
 
-@media screen and (max-width: 768px) {
-    
+.Navbar_noDisplay {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition),
+    visibility 0s 0.4s;
 }
