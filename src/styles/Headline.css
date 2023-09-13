@@ -44,6 +44,12 @@
 	transition: opacity var(--transition);
 }
 
+.Headline_hint {
+  animation: Headline_hint--popIn 1.4s ease-in-out 1 forwards;
+  visibility: visible;
+  opacity: 1;
+}
+
 /* Overrididing styles */
 .Headline_text--hidden {
 	visibility: hidden;
@@ -59,6 +65,22 @@
 		transform: translateX(-100%);
 	}
 }
+
+@keyframes Headline_hint--popIn {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  71% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media rules */
 
 @media screen and (max-width: 768px) {
   .Headline_large {
