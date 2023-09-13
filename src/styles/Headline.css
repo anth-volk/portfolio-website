@@ -75,12 +75,15 @@
 }
 
 @media screen and (max-width: 480px) {
+  .Headline_text {
+    letter-spacing: -1px;
+  }
   .Headline_large {
-    font-size: calc(0.7 * var(--headline-size));
+    font-size: calc(0.65 * var(--headline-size));
   }
 
   .Headline_small {
-    font-size: calc(0.48 * var(--headline-size));
+    font-size: calc(0.4 * var(--headline-size));
   }
 
   .Headline_scrollWrapper {
