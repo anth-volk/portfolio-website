@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { tagCloudData } from '../data/tagCloudData.js';
 import { colors } from '../data/colors.js';
 import '../styles/TagCloud.css';
+import { useViewportWidth } from '../hooks/useViewportWidth.js';
 
 const CONTENT = 'content';
 
@@ -11,30 +12,16 @@ export default function TagCloud() {
 
 	// State to represent header to be listed as active
 	const [activeHeaderIndex, setActiveHeaderIndex] = useState(0);
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const viewportWidth = useViewportWidth();
 
 	function handleHeaderMouseOver(index) {
 		setActiveHeaderIndex(index);
 	}
 
-  function handleResize() {
-    const size = window.innerWidth;
-
-    setWindowSize(window.innerWidth);
-  }
-	
 	const colorKeys = Object.keys(colors);
-  let tagBlockSize = windowSize > 768 
-    ? `${0.0012 * windowSize + 0.5}rem`
-    : `${0.0012 * windowSize + 0.65}rem`
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    }
-  }, []);
+  let tagBlockSize = viewportWidth > 768 
+    ? `${0.0012 * viewportWidth + 0.5}rem`
+    : `${0.0012 * viewportWidth + 0.65}rem`
 
 	// Use the "headers" from the tag cloud data to create a row of three
 	// hoverable links; this will be placed above the tag cloud section

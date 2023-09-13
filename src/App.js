@@ -27,7 +27,7 @@ function App() {
       setViewportWidth(window.innerWidth);
     })
 
-    if (viewportWidth <= 575) {
+    if (viewportWidth <= 480) {
       setIsSmallDevice(true);
       setIsVisible(true);
     }
