@@ -33,7 +33,8 @@ export default function TagCloud() {
 		return (
 			<p 
 				key={index} 
-				onMouseOver={() => handleHeaderMouseOver(index)} 
+				onMouseOver={() => handleHeaderMouseOver(index)}
+        onClick={() => handleHeaderMouseOver(index)}
 				className={`TagCloud_header TagCloud_header--${colorKeys[colorSelector]} ${activeHeaderIndex === index ? `TagCloud_header--active` : ``}`}
 			>
 				{obj.header.toLowerCase()}

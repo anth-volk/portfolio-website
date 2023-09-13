@@ -178,7 +178,7 @@ p > a:active::after,
 }
 
 .App_primaryButton:hover {
-	box-shadow: 0px 0px 5px 1px var(--dark) inset;
+	box-shadow: 0px 0px 5px var(--dark) inset;
 }
 
 .App_light {
