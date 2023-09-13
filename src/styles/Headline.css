@@ -1,6 +1,6 @@
 :root {
-	--headline-size: 6rem;
-	--scroller-padding: 6rem;
+	--headline-size: 5.8rem;
+	--scroller-padding: 5.8rem;
 }
 
 .Headline {
@@ -58,4 +58,18 @@
 	100% {
 		transform: translateX(-100%);
 	}
+}
+
+@media screen and (max-width: 768px) {
+  .Headline_tabletLarge {
+    font-size: calc(0.85 * var(--headline-size));
+  }
+  
+  .Headline_tabletSmall {
+    font-size: calc(0.68 * var(--headline-size));
+  }
+
+  .Headline_scrollWrapper {
+    height: calc(0.68 * var(--headline-size));
+  }
 }

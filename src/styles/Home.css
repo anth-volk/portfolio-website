@@ -22,6 +22,21 @@
 	width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+
+  .Home {
+    min-height: 100vh;
+    height: unset;
+  }
+
+  .Home_bottomBox {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+
+}
+
 /*
 .Home_wrapper {
     height: 100%;

@@ -5,7 +5,7 @@
 	align-items: flex-start;
 	gap: 3rem;
 	width: 70%;
-	height: calc(var(--home-image-height)-5px);
+	height: calc(var(--home-image-height) - 5px);
 	padding: 0 3vw;
 }
 
@@ -13,7 +13,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 	gap: 2.5vw;
 	height: 100%;
 }
@@ -68,7 +68,7 @@
 .TagCloud_block {
 	position: absolute;
 	visibility: visible;
-	font-size: 2rem;
+	font-size: 2rem; /* This is a fallback for if JS script fails */
 	opacity: 1.0;
 	transition: opacity var(--transition);
 	text-align: center;
@@ -117,10 +117,27 @@
   }
 
   .TagCloud_block {
-    font-size: 1.6rem;
+    font-size: 1.6rem; /* Fallback; overriden by JS*/
   }
 
   .TagCloud_tag {
     font-size: 1.6rem;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .TagCloud {
+    width: 100%;
+    padding: 0;
+    height: unset;
+  }
+
+  .TagCloud_headers {
+    align-items: flex-start;
+  }
+
+  .TagCloud_block {
+    font-size: 1.4rem; /* Fallback; overriden by JS */
+  }
+
 }

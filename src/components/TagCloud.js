@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Local imports
 import { tagCloudData } from '../data/tagCloudData.js';
@@ -11,12 +11,30 @@ export default function TagCloud() {
 
 	// State to represent header to be listed as active
 	const [activeHeaderIndex, setActiveHeaderIndex] = useState(0);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
 
 	function handleHeaderMouseOver(index) {
 		setActiveHeaderIndex(index);
 	}
+
+  function handleResize() {
+    const size = window.innerWidth;
+
+    setWindowSize(window.innerWidth);
+  }
 	
 	const colorKeys = Object.keys(colors);
+  let tagBlockSize = windowSize > 768 
+    ? `${0.0012 * windowSize + 0.5}rem`
+    : `${0.0012 * windowSize + 0.65}rem`
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, []);
 
 	// Use the "headers" from the tag cloud data to create a row of three
 	// hoverable links; this will be placed above the tag cloud section
@@ -48,6 +66,7 @@ export default function TagCloud() {
 				<p 
 					key={index} 
 					className={`TagCloud_block ${activeHeaderIndex !== index ? `TagCloud_block--hidden`: ``}`}
+          style={{fontSize: tagBlockSize}}
 				>
 					{obj.content}
 				</p>
