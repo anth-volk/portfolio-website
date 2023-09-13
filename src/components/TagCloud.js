@@ -20,8 +20,8 @@ export default function TagCloud() {
 
 	const colorKeys = Object.keys(colors);
   let tagBlockSize = viewportWidth > 768 
-    ? `${0.0012 * viewportWidth + 0.5}rem`
-    : `${0.0012 * viewportWidth + 0.65}rem`
+    ? `${Math.min(0.0012 * viewportWidth + 0.5, 2)}rem`
+    : `${Math.min(0.0012 * viewportWidth + 0.65, 2)}rem`
 
 	// Use the "headers" from the tag cloud data to create a row of three
 	// hoverable links; this will be placed above the tag cloud section

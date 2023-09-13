@@ -158,6 +158,10 @@
     font-size: calc(max(9vw, 1rem));
   }
 
+  .TagCloud_wrapper {
+    height: 6rem;
+  }
+
   .TagCloud_tag {
     font-size: calc(max(6vw, 1rem));
   }
