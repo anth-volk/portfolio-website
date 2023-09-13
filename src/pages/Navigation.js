@@ -13,7 +13,7 @@ export default function Navigation() {
   const breakpoint = 480;
 
 	// If displayed on small device, use mobile template
-	if (viewportWidth < breakpoint) {
+	if (viewportWidth <= breakpoint) {
 		return (
 			<NavbarMobile navLinks={navLinks}/>
 		)
