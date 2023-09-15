@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 // Local imports
 import { tagCloudData } from '../data/tagCloudData.js';
 import { colors } from '../data/colors.js';
 import '../styles/TagCloud.css';
-import { useViewportWidth } from '../hooks/useViewportWidth.js';
+import { useBreakpoint, useViewportWidth } from '../hooks/hooks.js';
 
 const CONTENT = 'content';
 
@@ -13,13 +13,14 @@ export default function TagCloud() {
 	// State to represent header to be listed as active
 	const [activeHeaderIndex, setActiveHeaderIndex] = useState(0);
   const viewportWidth = useViewportWidth();
+  const breakpoint = useBreakpoint();
 
 	function handleHeaderMouseOver(index) {
 		setActiveHeaderIndex(index);
 	}
 
 	const colorKeys = Object.keys(colors);
-  let tagBlockSize = viewportWidth > 768 
+  let tagBlockSize = breakpoint === 'mobile' || breakpoint === 'tablet'
     ? `${Math.min(0.0012 * viewportWidth + 0.5, 2)}rem`
     : `${Math.min(0.0012 * viewportWidth + 0.65, 2)}rem`
 

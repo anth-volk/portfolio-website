@@ -2,18 +2,17 @@
 import React from 'react';
 
 // Internal imports
-import { useViewportWidth } from '../hooks/useViewportWidth.js';
+import { useBreakpoint } from '../hooks/hooks.js';
 import { navLinks } from '../data/navLinks.js';
 import NavbarDesktop from '../components/NavbarDesktop.js';
 import NavbarMobile from '../components/NavbarMobile.js';
 
 export default function Navigation() {
 
-  const viewportWidth = useViewportWidth();
-  const breakpoint = 480;
+  const breakpoint = useBreakpoint();
 
 	// If displayed on small device, use mobile template
-	if (viewportWidth <= breakpoint) {
+	if (breakpoint === 'mobile') {
 		return (
 			<NavbarMobile navLinks={navLinks}/>
 		)
