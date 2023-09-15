@@ -88,11 +88,11 @@
   }
   
   .Headline_small {
-    font-size: calc(0.68 * var(--headline-size));
+    font-size: calc(0.6 * var(--headline-size));
   }
 
   .Headline_scrollWrapper {
-    height: calc(0.68 * var(--headline-size));
+    height: calc(0.6 * var(--headline-size));
   }
 }
 
