@@ -46,7 +46,7 @@
 }
 
 .Headline_hint {
-  animation: Headline_hint--popIn 5.4s ease-in-out 1 forwards, var(--headline-hint-dot-animation);
+  animation: Headline_hint--popIn 8.4s ease-in-out 1 forwards, var(--headline-hint-dot-animation);
   visibility: visible;
   opacity: 1;
   display: inline-block;
@@ -93,7 +93,7 @@
     visibility: hidden;
     opacity: 0;
   }
-  93% {
+  95% {
     visibility: visible;
     opacity: 0;
   }

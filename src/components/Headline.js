@@ -2,11 +2,13 @@
 import React, { useState } from 'react';
 
 // Internal imports
+import { useBreakpoint } from '../hooks/hooks.js';
 import '../styles/Headline.css';
 
 export default function Headline() {
 
 	const [isMouseOver, setIsMouseOver] = useState(false);
+  const breakpoint = useBreakpoint();
 
 	function handleMouseOver() {
 		setIsMouseOver(true);
@@ -16,14 +18,23 @@ export default function Headline() {
 		setIsMouseOver(false);
 	}
 
+  function handleClick() {
+    setIsMouseOver(prev => !prev);
+  }
+
 	return (
 		<div className='Headline'>
 			<h1 className='Headline_text App_light Headline_large'>Anthony Volk.</h1>
 			<div className='Headline_scrollContainer'>
 				<div 
 					className='Headline_scrollWrapper' 
-					onMouseOver={handleMouseOver} 
-					onMouseOut={handleMouseOut}
+          {...(breakpoint === 'mobile'
+            ? { onClick: handleClick }
+            : { 
+              onMouseOver: handleMouseOver, 
+              onMouseOut: handleMouseOut
+            }
+          )}
 				>
 					<h1 className='Headline_text App_light Headline_small'>Full-Stack Developer.
             <span className={`Headline_text App_light Headline_small Headline_hint Headline_hint--1 ${isMouseOver && 'Headline_text--hidden'}`}>.
