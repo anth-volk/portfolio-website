@@ -14,7 +14,7 @@ export default function NavbarMobile({navLinks}) {
 
 	const linkSection = navLinks.map( (entry, index) => {
 		return (
-			<a href={entry.url}>
+			<a href={entry.url} key={index}>
 				<li className='Navbar_link--dropdown' onClick={handleDropdownSelected}>{entry.text}</li>
 			</a>
 		)

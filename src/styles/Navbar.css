@@ -73,6 +73,7 @@
   font-weight: bold;
   font-family: var(--sans-serif-font);
   font-size: var(--nav-text-size);
+  position: relative;
 }
 
 .Navbar_button {
@@ -108,6 +109,32 @@
 .Navbar_button--rotate {
   transform: rotateZ(45deg);
   transition: transform var(--transition);
+}
+
+.Navbar_logo::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: -0.05em;
+  background: linear-gradient(
+    90deg, 
+    var(--red) 0%, 
+    var(--red) 24%, 
+    var(--blue) 38%,
+    var(--blue) 62%,
+    var(--yellow) 76%,
+    var(--yellow) 100%
+  );
+  height: 0.125em;
+  transition: right var(--transition);
+}
+
+.Navbar_logo:hover::after,
+.Navbar_logo:focus::after,
+.Navbar_logo:active::after {
+  right: 0;
 }
 
 /* Override default a underlining just for navbar and replace with style similar to nav links in Home.js */
