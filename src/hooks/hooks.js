@@ -15,16 +15,13 @@ function findBreakpoint(width) {
 
   });
 
-  return breakpointsFiltered[breakpointsFiltered.length - 1];
-
-  throw new Error("useViewportWidth: Error within findBreakpoint function");
+  return breakpointsFiltered[0];
 
 }
 
 export function useBreakpoint(initWidth = window.innerWidth) {
 
   const [breakpoint, setBreakpoint] = useState(findBreakpoint(initWidth));
-
 
   useEffect(() => {
     function handleResize() {
