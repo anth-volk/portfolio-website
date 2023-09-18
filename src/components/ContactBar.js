@@ -12,7 +12,7 @@ export default function ContactBar() {
     return (
       <div className='ContactBar_linkWrapper' key={index}>
         <p className='ContactBar_link'>
-          <a href={link.url} className='ContactBar_anchor'>
+          <a href={link.url} className='ContactBar_anchor' rel='noreferrer' target='_blank'>
           {link.text}
           </a>
         </p>

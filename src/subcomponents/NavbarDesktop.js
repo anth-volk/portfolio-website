@@ -1,12 +1,14 @@
 // External imports
-import React, { useState } from 'react';
+import React from 'react';
 
 // Internal imports
 import '../styles/Navbar.css';
-import { colors } from '../data/colors.js';
+// import { colors } from '../data/colors.js';
 
 export default function NavbarDesktop({navLinks}) {
 
+  // Future implementation
+  /*
 	// Map over the colors in the 'colors' object and return array of colors in use
 	const colorKeys = Object.keys(colors);
 
@@ -22,15 +24,18 @@ export default function NavbarDesktop({navLinks}) {
 			</a>
 		)
 	})
+  */
 
     return (
         <nav className="Navbar" id="navbar">
             <a href="#home"><p className="Navbar_logo">ANTHONY VOLK</p></a>
+            {/*
             <div className="Navbar_navList">
                 <ul>
-					{linkSection}
+					        {linkSection}
                 </ul>
             </div>
+            */}
         </nav>
     );
 
