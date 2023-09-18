@@ -84,12 +84,6 @@ h1 {
   padding: 2rem 0;
   font-size: var(--header-font-size);
   text-decoration: none;
-  /*
-  text-decoration-line: underline;
-  text-decoration-color: var(--blue);
-  text-decoration-thickness: 0.375rem;
-  text-decoration-skip-ink: none;
-  */
 }
 
 /* Using h2 as subtext header in design */
