@@ -43,6 +43,11 @@
 	visibility: visible;
 	opacity: 1.0;
 	transition: opacity var(--transition);
+  position: relative;
+}
+
+.Headline_hintWrapper {
+  position: absolute;
 }
 
 .Headline_hint {
@@ -51,14 +56,6 @@
   opacity: 1;
   display: inline-block;
 }
-
-/*
-.Headline_hint--1,
-.Headline_hint--2,
-.Headline_hint--3 {
-  animation: var(--headline-hint-dot-animation);
-}
-*/
 
 .Headline_hint--1 {
   animation-delay: 0s, 1.4s;
