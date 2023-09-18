@@ -4,8 +4,8 @@ import React from 'react';
 // Internal imports
 import { useBreakpoint } from '../hooks/hooks.js';
 import { navLinks } from '../data/navLinks.js';
-import NavbarDesktop from '../components/NavbarDesktop.js';
-import NavbarMobile from '../components/NavbarMobile.js';
+import NavbarDesktop from '../subcomponents/NavbarDesktop.js';
+import NavbarMobile from '../subcomponents/NavbarMobile.js';
 
 export default function Navigation() {
 
