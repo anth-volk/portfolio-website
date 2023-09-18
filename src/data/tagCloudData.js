@@ -31,7 +31,9 @@ export const tagCloudData = [
 			'foreign policy',
 			'politics',
 			'hiking',
-			'fermentation'
+			'fermentation',
+      'cuisine',
+      'cultures'
 		]
 	}
 ];
