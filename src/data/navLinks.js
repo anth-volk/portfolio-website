@@ -1,14 +1,22 @@
 export const navLinks = [
+  /*
 	{
 		text: 'about',
 		url: '#about'
 	},
+  */
 	{
-		text: 'work',
-		url: '#work'
+		text: 'experience',
+		url: '#experience'
 	},
+  /*
+  {
+    text: 'projects',
+    url: '#projects'
+  },
 	{
 		text: 'contact',
 		url: '#contact'
 	}
+  */
 ];

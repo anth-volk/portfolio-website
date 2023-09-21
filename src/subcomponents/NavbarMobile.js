@@ -1,13 +1,11 @@
 // External imports
-import React/*, {useState}*/ from 'react';
+import React, {useState} from 'react';
 
 // Internal imports
 import '../styles/Navbar.css';
 
 export default function NavbarMobile({navLinks}) {
 
-  // Future implementation
-  /*
 	const [isDropdownSelected, setIsDropdownSelected] = useState(false);
 
 	const handleDropdownSelected = () => {
@@ -21,14 +19,12 @@ export default function NavbarMobile({navLinks}) {
 			</a>
 		)
 	});
-  */
 
 	return (
 		<nav className="Navbar" id="navbar">
 			<a href="#home">
 				<p className="Navbar_logo">ANTHONY VOLK</p>
 			</a>
-      {/*
 			<button className="Navbar_button" onClick={handleDropdownSelected} aria-expanded={isDropdownSelected}>
         <i className={`fa-solid fa-plus ${isDropdownSelected && "Navbar_button--rotate"}`}></i>
 			</button>
@@ -38,7 +34,6 @@ export default function NavbarMobile({navLinks}) {
 				</ul>
 				<div className="Navbar_dropdownBlur"></div>
 			</div>
-      */}
 		</nav>
 	);
 }
