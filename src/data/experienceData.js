@@ -51,7 +51,7 @@ export const experienceData = [
   {
     company: "Japan Exchange & Teaching Programme",
     title: "Assistant Language Teacher",
-    dates: "August 2019 - August 2020",
+    dateRange: "August 2019 - August 2020",
     tags: [
       "project management",
       "planning",
