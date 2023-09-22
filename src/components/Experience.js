@@ -72,9 +72,9 @@ function constructResume(experienceData) {
         <div className="Experience_resItem_left">
           {title}
           {dateRange}
-          <div className="Experience_resItem_tagWrapper">
-            {tags}
-          </div>
+        </div>
+        <div className="Experience_resItem_tagWrapper">
+          {tags}
         </div>
         <ul className="Experience_resItem_right">
           {description}

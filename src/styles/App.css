@@ -260,5 +260,15 @@ a.button {
     transition: none;
   }
 
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: calc(0.75 * var(--header-font-size));
+  }
+
+  h2 {
+    font-size: calc(1.5 * var(--text-font-size));
+  }
+}
+
 
 }
