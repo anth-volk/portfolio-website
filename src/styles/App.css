@@ -6,7 +6,9 @@
 
 :root {
   --dark: #121212;
+  --dark-a11y: black;
   --light: #ccccce;
+  --light-a11y: white;
   --red: #be666f;
   --blue: #67989e;
   --yellow: #dec467;
@@ -14,7 +16,7 @@
   --gothic-font: 'Bebas Neue', 'Verdana', Arial, sans-serif;
   --sans-serif-font: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   --gutter: 6.25vw;
-  --header-font-size: 2.5rem;
+  --header-font-size: 3rem;
   --text-font-size: 1.125rem;
   --nav-text-size: 1.25rem;
   --nav-height: 50px;
@@ -78,22 +80,22 @@ html {
 /* SITE-WIDE STYLING: TEXT STYLING */
 
 h1 {
-  font-family: var(--mono-font);
-  color: var(--primary-text-color);
+  font-family: var(--gothic-font);
+  color: var(--light);
   cursor: default;
-  padding: 2rem 0;
   font-size: var(--header-font-size);
   text-decoration: none;
+  padding-top: 1rem;
 }
 
 /* Using h2 as subtext header in design */
 
 h2 {
-  font-family: var(--mono-font);
-  color: var(--primary-text-color);
+  font-family: var(--gothic-font);
+  color: var(--light);
   cursor: default;
   padding: 0.5rem 0 0.25rem 0;
-  font-size: 1rem;
+  font-size: calc(2 * var(--text-font-size));
   font-weight: normal;
 }
 
@@ -162,7 +164,7 @@ p > a:active::after,
 
 .App_primaryButton {
 	background-color: var(--red);
-	color: var(--light);
+	color: var(--light-a11y);
 	font-size: var(--text-font-size);
 	padding: 1rem 2rem;
 	border: none;

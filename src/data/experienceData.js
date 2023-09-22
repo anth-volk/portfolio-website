@@ -19,7 +19,7 @@ export const experienceData = [
       Flask, and OpenFisca`,
       `Solved critical cross-stack data error, preventing
       obsolescence of ~80% of user profiles`,
-      `Developing E2E testing infrastructure in React
+      `Building E2E testing infrastructure in React
       and Python utilizing Jest, Pytest, and Cypress`,
       `Developed light-touch project management framework
       for ongoing front-end redesign`
