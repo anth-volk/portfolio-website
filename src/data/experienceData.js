@@ -13,16 +13,30 @@ export const experienceData = [
       "project management"
     ],
     bullets: [
-      `Provide planning, development, implementation,
-      and maintenance of a full-stack open-source web
-      application implemented in ReactJS, SQL, Python
-      Flask, and OpenFisca`,
-      `Solved critical cross-stack data error, preventing
-      obsolescence of ~80% of user profiles`,
-      `Building E2E testing infrastructure in React
-      and Python utilizing Jest, Pytest, and Cypress`,
-      `Developed light-touch project management framework
-      for ongoing front-end redesign`
+      `Led team in building ground-up rewrite of public-facing 
+      web application across 1,300+ commits, migrating from a 
+      legacy React/JavaScript codebase to modern React/TypeScript/Vite 
+      stack with comprehensive test coverage and Redux-based state 
+      management architecture; presented final product to 50+ 
+      stakeholders at in-person event`,
+      `Migrated simulation API from Google Cloud to Modal, 
+      designing gateway service, version registry, and automated 
+      deployment pipeline using Docker multi-stage builds, 
+      Terraform, and GitHub Actions CI/CD, saving $11,000 
+      in server costs per month`,
+      `Built Claude AI-powered readable policy analysis 
+      feature, building streaming response handlers, computation 
+      tree tracing infrastructure, conditional endpoint logic, 
+      and robust error handling for real-time AI-generated impact 
+      summaries within application`,
+      `Designed and implemented database schemas for simulation 
+      storage and user reports using SQL with migration-safe patterns, 
+      including CRUD endpoints, API versioning, and data validation 
+      using Pydantic and Yup schemas across Python and TypeScript 
+      services`,
+      `Spearheaded the creation of roadmapping, quarterly planning, 
+      and sprint cycle processes, improving on-time project delivery 
+      rates`
     ]
   },
   {
