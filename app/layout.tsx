@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Bebas_Neue, Inter } from 'next/font/google';
 import Header from '@/components/Header';
+import ThemeProvider from '@/components/ThemeProvider';
 import './globals.css';
 
 const bebasNeue = Bebas_Neue({
@@ -26,12 +27,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${bebasNeue.variable} ${inter.variable}`}>
+    <html lang="en" className={`${bebasNeue.variable} ${inter.variable}`} suppressHydrationWarning>
       <body>
-        <Header />
-        <main className="main-content">
-          <div className="page-inner">{children}</div>
-        </main>
+        <ThemeProvider>
+          <Header />
+          <main className="main-content">
+            <div className="page-inner">{children}</div>
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );

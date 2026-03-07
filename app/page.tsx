@@ -43,7 +43,6 @@ export default function HomePage() {
               priority
               style={{ objectFit: 'cover', objectPosition: 'center top' }}
             />
-            <div className="headshot-frame"></div>
           </div>
         </div>
       </div>
