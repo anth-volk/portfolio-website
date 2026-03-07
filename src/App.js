@@ -1,29 +1,215 @@
-// External imports
-import React from 'react';
-
-// Internal imports
+import React, { useState, useCallback } from 'react';
 import './styles/App.css';
-import Home from './components/Home.js';
-import Navigation from './components/Navigation.js';
-// import About from './components/About.js';
-import Experience from './components/Experience.js';
-// import Projects from './components/Projects.js';
-// import Contact from './components/Contact.js';
-import ContactBar from './components/ContactBar.js';
+import headshot from './assets/volk-anthony-img.png';
 
 function App() {
+  const [activePage, setActivePage] = useState('home');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const go = useCallback((page) => {
+    setActivePage(page);
+    setMobileMenuOpen(false);
+  }, []);
+
+  const toggleMob = useCallback(() => {
+    setMobileMenuOpen((prev) => !prev);
+  }, []);
+
+  const pages = ['home', 'experience', 'skills', 'writing', 'contact'];
+  const accentColors = ['var(--red)', 'var(--blue)', 'var(--yellow)', 'var(--red)', 'var(--blue)'];
 
   return (
-    <main>
-      <Navigation/>
-      <Home />
-      {/* <About />*/}
-      <Experience />
-      {/* <Projects />*/}
-      {/* <Contact />*/}
-      <ContactBar />
-    </main>
+    <>
+      <header className="header">
+        <div className="header-brand">
+          <span className="logo" onClick={() => go('home')}>Anthony Volk</span>
+        </div>
+        <nav className="nav">
+          {pages.map((page, i) => (
+            <a
+              key={page}
+              className={`nav-link${activePage === page ? ' active' : ''}`}
+              onClick={() => go(page)}
+              style={activePage === page ? { '--accent': accentColors[i] } : undefined}
+            >
+              {page.charAt(0).toUpperCase() + page.slice(1)}
+            </a>
+          ))}
+        </nav>
+        <div className="nav-social">
+          <a href="https://github.com/anth-volk" target="_blank" rel="noopener noreferrer">GH</a>
+          <a href="https://linkedin.com/in/anthonyvolk" target="_blank" rel="noopener noreferrer">LI</a>
+        </div>
+        <button className={`hamburger${mobileMenuOpen ? ' open' : ''}`} onClick={toggleMob}>
+          <div></div><div></div><div></div>
+        </button>
+      </header>
 
+      <div className={`mobile-menu${mobileMenuOpen ? ' open' : ''}`}>
+        {pages.map((page) => (
+          <a key={page} className="nav-link" onClick={() => go(page)}>
+            {page.charAt(0).toUpperCase() + page.slice(1)}
+          </a>
+        ))}
+      </div>
+
+      <div className="page-wrap">
+        {/* Home */}
+        <div className={`page${activePage === 'home' ? ' active' : ''}`}>
+          <div className="home-hero">
+            <div className="hero-left">
+              <h1 className="hero-name">Anthony Volk</h1>
+              <p className="hero-role">Full-Stack Developer</p>
+              <p className="hero-mission">
+                I'm a software engineer and international relations professional
+                with a passion for building digital tools that empower people.
+              </p>
+              <div className="hero-cta">
+                <a href="mailto:anth.volk@gmail.com" className="hero-btn hero-btn--primary">
+                  Email<span className="btn-arrow">&rarr;</span>
+                </a>
+                <a href="https://linkedin.com/in/anthonyvolk" target="_blank" rel="noopener noreferrer" className="hero-btn hero-btn--secondary">
+                  LinkedIn<span className="btn-arrow">&rarr;</span>
+                </a>
+              </div>
+              <div className="hero-bar"><span></span><span></span><span></span></div>
+            </div>
+            <div className="hero-right">
+              <div className="headshot-wrapper">
+                <img className="headshot" src={headshot} alt="Anthony Volk" />
+                <div className="headshot-frame"></div>
+              </div>
+            </div>
+          </div>
+          <div className="home-cards">
+            <div className="home-card" onClick={() => go('experience')}>
+              <div className="card-title">Experience</div>
+              <p className="card-desc">PolicyEngine, ISE, JET — three chapters of building and learning.</p>
+            </div>
+            <div className="home-card" onClick={() => go('skills')}>
+              <div className="card-title">Skills</div>
+              <p className="card-desc">Full-stack development, design, strategy, and languages.</p>
+            </div>
+            <div className="home-card" onClick={() => go('writing')}>
+              <div className="card-title">Writing</div>
+              <p className="card-desc">Posts about code, policy, and the overlap between them.</p>
+            </div>
+            <div className="home-card" onClick={() => go('contact')}>
+              <div className="card-title">Contact</div>
+              <p className="card-desc">Reach out via email, LinkedIn, or GitHub.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Experience */}
+        <div className={`page${activePage === 'experience' ? ' active' : ''}`}>
+          <h2 className="section-title">Experience</h2>
+          <p className="section-sub">Where I've worked and what I've built.</p>
+
+          <div className="job">
+            <div className="job-meta">
+              <h3>PolicyEngine</h3>
+              <div className="role" style={{ color: 'var(--red)' }}>Full-Stack Developer</div>
+              <div className="dates">April 2023 &ndash; Present</div>
+            </div>
+            <div className="job-body">
+              <ul>
+                <li>Led ground-up rewrite across 1,300+ commits</li>
+                <li>Migrated simulation API saving $11K/month</li>
+                <li>Built Claude AI-powered policy analysis</li>
+                <li>Designed database schemas with SQL &amp; Pydantic</li>
+                <li>Spearheaded roadmapping and sprint cycles</li>
+              </ul>
+              <div className="tags">
+                <span>React</span><span>JavaScript</span><span>SQL</span>
+                <span>Python</span><span>Flask</span><span>PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="job">
+            <div className="job-meta">
+              <h3>ISE</h3>
+              <div className="role" style={{ color: 'var(--blue)' }}>Research Lead</div>
+              <div className="dates">July 2018 &ndash; October 2022</div>
+            </div>
+            <div className="job-body">
+              <ul>
+                <li>Co-led three reports on service delivery constraints</li>
+                <li>Produced Asia-Pacific infrastructure reports</li>
+              </ul>
+              <div className="tags">
+                <span>Strategy</span><span>Research</span>
+                <span>Client-Facing</span><span>PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="job">
+            <div className="job-meta">
+              <h3>JET Programme</h3>
+              <div className="role" style={{ color: 'var(--yellow)' }}>Assistant Language Teacher</div>
+              <div className="dates">Aug 2019 &ndash; Aug 2020</div>
+            </div>
+            <div className="job-body">
+              <ul>
+                <li>English classes of ~30 students</li>
+                <li>Cross-cultural work in Japanese</li>
+              </ul>
+              <div className="tags">
+                <span>Education</span><span>Planning</span><span>Japanese</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Skills */}
+        <div className={`page${activePage === 'skills' ? ' active' : ''}`}>
+          <h2 className="section-title">Skills &amp; Interests</h2>
+          <p className="section-sub">What I work with and what I care about.</p>
+          <div className="skills-grid">
+            <div>
+              <h3 className="sk-title">Skills</h3>
+              <div className="sk-list">
+                <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                <span>Wireframing</span><span>Figma</span><span>SQL</span>
+                <span>Node</span><span>Express</span><span>React</span>
+                <span>Strategy</span><span>Python</span><span>Flask</span><span>C</span>
+              </div>
+            </div>
+            <div>
+              <h3 className="sk-title">Interests</h3>
+              <div className="sk-list">
+                <span>Travel</span><span>Languages</span><span>Foreign Policy</span>
+                <span>Politics</span><span>Hiking</span><span>Fermentation</span>
+                <span>Cuisine</span><span>Cultures</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Writing */}
+        <div className={`page${activePage === 'writing' ? ' active' : ''}`}>
+          <h2 className="section-title">Writing</h2>
+          <p className="section-sub">Blog &amp; Products</p>
+          <p className="writing-note">
+            Coming soon &mdash; blog posts about full-stack development and policy technology,
+            plus open-source tools that make policy accessible.
+          </p>
+        </div>
+
+        {/* Contact */}
+        <div className={`page${activePage === 'contact' ? ' active' : ''}`}>
+          <h2 className="section-title">Contact</h2>
+          <p className="section-sub">I'm always open to conversations about technology and policy.</p>
+          <div className="contact-list">
+            <a href="mailto:anth.volk@gmail.com">Email <span>anth.volk@gmail.com</span></a>
+            <a href="https://linkedin.com/in/anthonyvolk" target="_blank" rel="noopener noreferrer">LinkedIn <span>anthonyvolk</span></a>
+            <a href="https://github.com/anth-volk" target="_blank" rel="noopener noreferrer">GitHub <span>anth-volk</span></a>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
