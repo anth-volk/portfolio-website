@@ -1,13 +1,14 @@
 import React, { useState, useCallback } from 'react';
 import './styles/App.css';
 import headshot from './assets/volk-anthony-img.png';
+import { pages } from './data/pages';
 
 function App() {
   const [activePage, setActivePage] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const go = useCallback((page) => {
-    setActivePage(page);
+  const go = useCallback((slug) => {
+    setActivePage(slug);
     setMobileMenuOpen(false);
   }, []);
 
@@ -15,8 +16,10 @@ function App() {
     setMobileMenuOpen((prev) => !prev);
   }, []);
 
-  const pages = ['home', 'experience', 'skills', 'writing', 'contact'];
-  const accentColors = ['var(--red)', 'var(--blue)', 'var(--yellow)', 'var(--red)', 'var(--blue)'];
+  const getColor = (slug) => pages.find((p) => p.slug === slug)?.color;
+
+  // Pages that appear as home cards (everything except home itself)
+  const cardPages = pages.filter((p) => p.slug !== 'home');
 
   return (
     <>
@@ -25,14 +28,14 @@ function App() {
           <span className="logo" onClick={() => go('home')}>Anthony Volk</span>
         </div>
         <nav className="nav">
-          {pages.map((page, i) => (
+          {pages.map((p) => (
             <a
-              key={page}
-              className={`nav-link${activePage === page ? ' active' : ''}`}
-              onClick={() => go(page)}
-              style={activePage === page ? { '--accent': accentColors[i] } : undefined}
+              key={p.slug}
+              className={`nav-link${activePage === p.slug ? ' active' : ''}`}
+              onClick={() => go(p.slug)}
+              style={{ '--accent': p.color }}
             >
-              {page.charAt(0).toUpperCase() + page.slice(1)}
+              {p.name}
             </a>
           ))}
         </nav>
@@ -46,9 +49,9 @@ function App() {
       </header>
 
       <div className={`mobile-menu${mobileMenuOpen ? ' open' : ''}`}>
-        {pages.map((page) => (
-          <a key={page} className="nav-link" onClick={() => go(page)}>
-            {page.charAt(0).toUpperCase() + page.slice(1)}
+        {pages.map((p) => (
+          <a key={p.slug} className="nav-link" onClick={() => go(p.slug)}>
+            {p.name}
           </a>
         ))}
       </div>
@@ -82,22 +85,22 @@ function App() {
             </div>
           </div>
           <div className="home-cards">
-            <div className="home-card" onClick={() => go('experience')}>
-              <div className="card-title">Experience</div>
-              <p className="card-desc">PolicyEngine, ISE, JET — three chapters of building and learning.</p>
-            </div>
-            <div className="home-card" onClick={() => go('skills')}>
-              <div className="card-title">Skills</div>
-              <p className="card-desc">Full-stack development, design, strategy, and languages.</p>
-            </div>
-            <div className="home-card" onClick={() => go('writing')}>
-              <div className="card-title">Writing</div>
-              <p className="card-desc">Posts about code, policy, and the overlap between them.</p>
-            </div>
-            <div className="home-card" onClick={() => go('contact')}>
-              <div className="card-title">Contact</div>
-              <p className="card-desc">Reach out via email, LinkedIn, or GitHub.</p>
-            </div>
+            {cardPages.map((p) => (
+              <div
+                key={p.slug}
+                className="home-card"
+                style={{ '--card-accent': p.color }}
+                onClick={() => go(p.slug)}
+              >
+                <div className="card-title">{p.name}</div>
+                <p className="card-desc">
+                  {p.slug === 'experience' && 'PolicyEngine, ISE, JET — three chapters of building and learning.'}
+                  {p.slug === 'skills' && 'Full-stack development, design, strategy, and languages.'}
+                  {p.slug === 'writing' && 'Posts about code, policy, and the overlap between them.'}
+                  {p.slug === 'contact' && 'Reach out via email, LinkedIn, or GitHub.'}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -109,7 +112,7 @@ function App() {
           <div className="job">
             <div className="job-meta">
               <h3>PolicyEngine</h3>
-              <div className="role" style={{ color: 'var(--red)' }}>Full-Stack Developer</div>
+              <div className="role" style={{ color: getColor('home') }}>Full-Stack Developer</div>
               <div className="dates">April 2023 &ndash; Present</div>
             </div>
             <div className="job-body">
@@ -130,7 +133,7 @@ function App() {
           <div className="job">
             <div className="job-meta">
               <h3>ISE</h3>
-              <div className="role" style={{ color: 'var(--blue)' }}>Research Lead</div>
+              <div className="role" style={{ color: getColor('experience') }}>Research Lead</div>
               <div className="dates">July 2018 &ndash; October 2022</div>
             </div>
             <div className="job-body">
@@ -148,7 +151,7 @@ function App() {
           <div className="job">
             <div className="job-meta">
               <h3>JET Programme</h3>
-              <div className="role" style={{ color: 'var(--yellow)' }}>Assistant Language Teacher</div>
+              <div className="role" style={{ color: getColor('skills') }}>Assistant Language Teacher</div>
               <div className="dates">Aug 2019 &ndash; Aug 2020</div>
             </div>
             <div className="job-body">
