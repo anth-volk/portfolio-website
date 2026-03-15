@@ -48,7 +48,7 @@ export default function HomePage() {
       </div>
 
       {/* Experience Preview */}
-      <div className="preview-section">
+      <div className="preview-section selection-blue">
         <div className="preview-header">
           <h2 className="preview-title">Experience</h2>
           <p className="preview-sub">Where I&apos;ve worked and what I&apos;ve built.</p>
@@ -59,16 +59,19 @@ export default function HomePage() {
         >
           <div className="preview-card-meta">
             <h3>PolicyEngine</h3>
-            <div className="preview-role" style={{ color: 'var(--red)' }}>
+            <div className="preview-role" style={{ color: 'var(--blue)' }}>
               Full-Stack Developer
             </div>
             <div className="preview-dates">April 2023 &ndash; Present</div>
           </div>
           <div className="preview-card-body">
             <ul>
-              <li>Led ground-up rewrite across 1,300+ commits</li>
-              <li>Migrated simulation API saving $11K/month</li>
-              <li>Built Claude AI-powered policy analysis</li>
+              <li>Led ground-up rewrite of web app across 1,300+ commits to modern React/TypeScript/Vite stack</li>
+              <li>Architecting multi-agent AI pipeline to generate and deploy full-stack apps from natural-language specs</li>
+              <li>Migrated simulation API to Modal, saving $11K/month via custom gateway and CI/CD pipeline</li>
+              <li>Built Claude AI-powered policy analysis with streaming responses and real-time impact summaries</li>
+              <li>Designed database schemas and API versioning with SQL, Pydantic, and Yup across Python and TypeScript</li>
+              <li>Spearheaded roadmapping, quarterly planning, and sprint cycle processes</li>
             </ul>
             <div className="tags">
               <span>React</span>
@@ -86,18 +89,14 @@ export default function HomePage() {
       </div>
 
       {/* Writing Preview */}
-      <div className="preview-section">
+      <div className="preview-section selection-yellow">
         <div className="preview-header">
           <h2 className="preview-title">Writing</h2>
-          <p className="preview-sub">Blog &amp; Products</p>
+          <p className="preview-sub">Thoughts on software, policy, and building things that matter.</p>
         </div>
         <div className="preview-articles">
-          {mockArticles.map((a, i) => (
-            <div key={i} className="article-card">
-              <div className="article-date">{a.date}</div>
-              <h3 className="article-title">{a.title}</h3>
-              <p className="article-excerpt">{a.excerpt}</p>
-            </div>
+          {mockArticles.map((_, i) => (
+            <div key={i} className="article-card" />
           ))}
         </div>
         <Link href="/writing" className="preview-link">
